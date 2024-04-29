@@ -42,3 +42,36 @@ function executeCode() {
     };
     outputDiv.textContent = jade.about_me();
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    type(); // Start typing animation
+    setupScrollHandling(); // Setup custom scroll events
+});
+
+function setupScrollHandling() {
+    const downArrow = document.querySelector('.down-arrow');
+    const upArrow = document.querySelector('.up-arrow');
+
+    downArrow.addEventListener('click', function() {
+        window.location.hash = '#about';
+    });
+
+    upArrow.addEventListener('click', function() {
+        window.location.hash = '#home';
+    });
+
+    // Optional: Custom scroll event for more control
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+        let st = window.pageYOffset || document.documentElement.scrollTop;
+        if (st > lastScrollTop){
+            // downscroll code
+            window.location.hash = '#about';
+        } else {
+            // upscroll code
+            window.location.hash = '#home';
+        }
+        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    }, false);
+}
+
