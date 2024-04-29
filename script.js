@@ -1,23 +1,44 @@
-const text = "Welcome to my portfolio!";
-const typingDiv = document.getElementById('typing');
-let i = 0;
+const phrases = ["Jade Aidoghie", "Welcome to my portfolio!"];
+let currentPhrase = 0;
+let letterCount = 0;
+let typingDiv = document.getElementById('typing');
+let typingSpeed = 150;
+let backspaceSpeed = 100;
 
 function type() {
-    if (i < text.length) {
-        typingDiv.innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 150);
+    if (letterCount < phrases[currentPhrase].length) {
+        typingDiv.textContent += phrases[currentPhrase].charAt(letterCount);
+        letterCount++;
+        setTimeout(type, typingSpeed);
+    } else {
+        setTimeout(backspace, 2000);
     }
 }
+
+function backspace() {
+    if (letterCount > 0) {
+        typingDiv.textContent = typingDiv.textContent.slice(0, -1);
+        letterCount--;
+        setTimeout(backspace, backspaceSpeed);
+    } else {
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        setTimeout(type, 500);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    type();
+});
 
 function executeCode() {
-    const code = document.getElementById('code').value;
-    try {
-        const output = eval(code); // For Python-like behavior, replace with API call to a Python execution service
-        document.getElementById('output').textContent = output;
-    } catch (error) {
-        document.getElementById('output').textContent = 'Error: ' + error.message;
-    }
+    let outputDiv = document.getElementById('output');
+    let jade = {
+        education: 'BS in Computer Science',
+        profession: 'Software Developer',
+        skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+        about_me: function() {
+            return `Education: ${this.education}, Profession: ${this.profession}, Skills: ${this.skills.join(', ')}`;
+        }
+    };
+    outputDiv.textContent = jade.about_me();
 }
-
-document.addEventListener('DOMContentLoaded', type);
