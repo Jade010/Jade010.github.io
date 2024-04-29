@@ -8,6 +8,10 @@ body, html {
     background: #FFF5DE; /* Light cream background */
 }
 
+.hidden {
+    display: none;
+}
+
 #navbar {
     background-color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -16,6 +20,7 @@ body, html {
     top: 0;
     text-align: center;
     padding: 10px 0;
+    transition: top 0.3s;
 }
 
 .nav-link {
