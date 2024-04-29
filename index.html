@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <div id="navbar">
+    <div id="navbar" class="hidden">
         <a href="#home" class="nav-link">HOME</a>
         <a href="#about" class="nav-link">ABOUT ME</a>
         <a href="#projects" class="nav-link">PROJECTS</a>
@@ -16,11 +16,10 @@
     <section id="home" class="screen">
         <img src="IMG_E4016.JPG" alt="Profile Picture" class="profile-img">
         <div id="typewriter-text"></div>
-        <a href="#about" class="arrow">↓</a>
     </section>
 
     <section id="about" class="screen">
-        <a href="#home" class="arrow up">↑</a>
+        <h1>About Me</h1>
         <div class="code-container">
             <pre id="code-block" class="code">
 import datetime
@@ -40,16 +39,14 @@ class Jade:
 person = Jade()
 print(person.get_bio())
 print("Hobbies include: " + ", ".join(person.hobbies))
-        </pre>
-        <div class="output-box" id="output"></div>
-    </div>    
-        <a href="#project" class="arrow">↓</a>
-        <h1>About Me</h1>
+            </pre>
+            <div class="output-box" id="output"></div>
+        </div>    
     </section>
 
-    <section id="project" class="screen">
-        <a href="#home" class="arrow up">↑</a>
+    <section id="projects" class="screen">
         <h1>Projects</h1>
+        <!-- Projects content goes here -->
     </section>
 
     <script src="script.js"></script>
