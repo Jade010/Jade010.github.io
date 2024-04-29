@@ -1,59 +1,64 @@
 body, html {
-	height: 100%;
-	margin: 0;
-	font-family: Arial, sans-serif;
-	background-color: #b2ac88; /* Updated to sage green */
-	color: white;
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #FD5E53; /* Warm sunset orange */
+    color: #FFF5DE; /* Light cream color */
+    text-align: center;
 }
 
-section {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	text-align: center;
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .profile-img {
-	max-width: 200px;
-	border-radius: 100%;
-	margin-bottom: 40px;
+    max-width: 30%;
+    border-radius: 50%;
 }
 
 .typing-animation {
-	margin-bottom: 20px;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #FFF5DE;
+    animation: blink-caret .75s step-end infinite;
 }
 
 .scroll-arrow {
-	width: 50px;
-	cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF5DE;
 }
 
-.code-input, code-output {
-	width: 90%;
-	max-width: 600px;
-	background-color: #333;
-	color: #ddd;
-	border: none;
-	padding: 10px;
-	font-family: monospace;
-	margin: 10px;
+.up-arrow {
+    top: 20px;
+    bottom: auto;
 }
 
-.code-input {
-    height: 120px;
-}
-
-.code-output {
-    min-height: 50px;
+.code-container {
+    text-align: left;
+    width: 60%;
+    margin: auto;
 }
 
 button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: grey;
-    border: none;
+    background-color: #333;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
 }
