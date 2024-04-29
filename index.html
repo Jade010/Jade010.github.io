@@ -7,10 +7,23 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<section class="home">
 	<header>
 		<img src="IMG_E4016.JPG" alt="Jade Aidoghie" class="profile-img">
 		<div id="typing" class="typing-animation"></div>
+		<div class="navigation">
+			<a href="#about-me"><img src="down-arrow.png" alt="Scroll Down" class="scroll-arrow"></a>
+		</div>
 	</header>
+	</section>
+	<section id="about-me" class="about-me">
+		<h2>About Me</h2>
+		<p>Text here...</p>
+		<h3>Try this Python Code:</h3>
+		<textarea id="code" class="code-input">print("Hello, world!")</textarea>
+		<button onclick="executeCode()">Execute</button>
+		<p id="output" class="code-output"></p>
+	</section>
 	<script src="script.js"></script>
 </body>
 </html>
