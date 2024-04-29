@@ -3,11 +3,21 @@ const typingDiv = document.getElementById('typing');
 let i = 0;
 
 function type() {
-	if (i < text.length) {
-		typingDiv.innerHTML += text.charAt(i);
-		i++;
-		setTimeout(type, 150); // Typing speed in milliseconds
-	}
+    if (i < text.length) {
+        typingDiv.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 150);
+    }
 }
 
-document.addEventListener('DOMContentLoaded', type); // Start typing animation once the DOM is fully loaded
+function executeCode() {
+    const code = document.getElementById('code').value;
+    try {
+        const output = eval(code); // For Python-like behavior, replace with API call to a Python execution service
+        document.getElementById('output').textContent = output;
+    } catch (error) {
+        document.getElementById('output').textContent = 'Error: ' + error.message;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', type);
