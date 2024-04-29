@@ -2,9 +2,15 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
     background-color: #FD5E53; /* Warm sunset orange */
     color: #FFF5DE; /* Light cream color */
     text-align: center;
+    scroll-snap-align: start; /* Ensures the section aligns to the viewport when scrolling */
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
 }
 
 .section {
