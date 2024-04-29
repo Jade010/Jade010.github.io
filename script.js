@@ -30,6 +30,15 @@ function type() {
 
 document.addEventListener('DOMContentLoaded', function() {
     runCode();
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        const homeHeight = document.getElementById('home').offsetHeight;
+        if (window.pageYOffset > homeHeight - 50) {
+            navbar.classList.remove('hidden');
+        } else {
+            navbar.classList.add('hidden');
+        }
+    });
 });
 
 function runCode() {
