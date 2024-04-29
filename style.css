@@ -2,41 +2,58 @@ body, html {
 	height: 100%;
 	margin: 0;
 	font-family: Arial, sans-serif;
-	background-color: white;
-	color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	background-color: #b2ac88; /* Updated to sage green */
+	color: white;
 }
 
-header {
+section {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	text-align: center;
 }
 
 .profile-img {
-	max-width: 150px;
-	border-radius: 50%;
-	margin-bottom: 20px;
+	max-width: 200px;
+	border-radius: 100%;
+	margin-bottom: 40px;
 }
 
 .typing-animation {
-	font-size: 24px;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 3px solid white; /* Cursor effect */
-	animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
+	margin-bottom: 20px;
 }
 
-/* Typing keyframe */
-@keyframes typing {
-	from { width:0 }
-	to { width: 100% }
+.scroll-arrow {
+	width: 50px;
+	cursor: pointer;
 }
 
-/* Cursor animations */
-@keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: white }
+.code-input, code-output {
+	width: 90%;
+	max-width: 600px;
+	background-color: #333;
+	color: #ddd;
+	border: none;
+	padding: 10px;
+	font-family: monospace;
+	margin: 10px;
+}
+
+.code-input {
+    height: 120px;
+}
+
+.code-output {
+    min-height: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: grey;
+    border: none;
+    color: white;
+}
