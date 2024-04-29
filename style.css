@@ -1,70 +1,104 @@
 body, html {
-    height: 100%;
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     font-family: 'Arial', sans-serif;
-    overflow-x: hidden; /* Prevents horizontal scrolling */
-    background-color: #FD5E53; /* Warm sunset orange */
-    color: #FFF5DE; /* Light cream color */
+    scroll-behavior: smooth;
+    background: #FFF5DE; /* Light cream background */
+}
+
+#navbar {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
     text-align: center;
-    scroll-snap-align: start; /* Ensures the section aligns to the viewport when scrolling */
+    padding: 10px 0;
 }
 
-html {
-    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
 }
 
-.section {
+.screen {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .profile-img {
-    max-width: 30%;
+    width: 30%;
     border-radius: 50%;
+    border: 5px solid #FAD6A5; /* Light peach border */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-.typing-animation {
+#typewriter-text {
     font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    border-right: 3px solid #333; /* Simulating the cursor */
+    padding-right: 10px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #FFF5DE;
-    animation: blink-caret .75s step-end infinite;
 }
 
-.scroll-arrow {
+.arrow {
     position: absolute;
     bottom: 20px;
     font-size: 24px;
     cursor: pointer;
     text-decoration: none;
-    color: #FFF5DE;
+    color: #333;
 }
 
-.up-arrow {
+.arrow.up {
     top: 20px;
     bottom: auto;
 }
 
+.arrow:hover {
+    color: #555;
+}
+
 .code-container {
-    text-align: left;
-    width: 60%;
-    margin: auto;
-}
-
-button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    display: flex;
+    width: 80%;
+    height: 60vh;
     margin-top: 20px;
-    cursor: pointer;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-button:hover {
-    background-color: #555;
+.code {
+    flex: 1;
+    margin-right: 20px;
+    background-color: #282c34; /* Dark background for code area */
+    color: #abb2bf; /* Light grey text */
+    padding: 20px;
+    overflow: auto;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap; /* Maintains whitespace formatting */
+    word-wrap: break-word;
+    border-radius: 5px;
+}
+
+.output-box {
+    flex: 1;
+    background-color: #282c34; /* Dark background for output */
+    color: #98c379; /* Green text for output to mimic console output */
+    padding: 20px;
+    overflow: auto;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
 }
