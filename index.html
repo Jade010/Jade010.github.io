@@ -7,27 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="section" id="home">
-        <img src="IMG_E4016.JPG" alt="Jade Aidoghie" class="profile-img">
-        <div id="typing" class="typing-animation"></div>
-        <a href="#about" class="scroll-arrow down-arrow">↓</a>
+     <div id="navbar">
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#about" class="nav-link">ABOUT ME</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
     </div>
-    <div class="section" id="about">
-        <a href="#home" class="scroll-arrow up-arrow">↑</a>
+
+    <section id="home" class="screen">
+        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+        <div id="typewriter-text"></div>
+        <a href="#about" class="arrow">↓</a>
+    </section>
+
+    <section id="about" class="screen">
+        <a href="#home" class="arrow up">↑</a>
         <div class="code-container">
-            <pre id="code">class Jade:
+            <pre id="code-block" class="code">
+import datetime
+
+class Jade:
     def __init__(self):
-        self.education = 'BS in Computer Science'
-        self.profession = 'Software Developer'
-        self.skills = ['HTML', 'CSS', 'JavaScript', 'Python']
-        
-    def about_me(self):
-        return f'Education: {self.education}, Profession: {self.profession}, Skills: {self.skills}'</pre>
-            <button onclick="executeCode()">Execute</button>
-            <p id="output"></p>
-        </div>
-    </div>
+        self.name = "Jade Aidoghie"
+        self.profession = "Software Developer"
+        self.education = "BS in Computer Science"
+        self.skills = ["Python", "JavaScript", "HTML", "CSS"]
+        self.hobbies = ["Photography", "Hiking", "Gaming"]
+    
+    def get_bio(self):
+        return f"My name is {self.name}, a {self.profession}. I have a {self.education} and my skills include " + ", ".join(self.skills) + "."
+
+# Create an instance of Jade
+person = Jade()
+print(person.get_bio())
+print("Hobbies include: " + ", ".join(person.hobbies))
+        </pre>
+        <div class="output-box" id="output"></div>
+    </div>    
+        <a href="#project" class="arrow">↓</a>
+        <h1>About Me</h1>
+    </section>
+
+    <section id="project" class="screen">
+        <a href="#home" class="arrow up">↑</a>
+        <h1>Projects</h1>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>
-
