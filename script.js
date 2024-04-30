@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    runCode();
     setupTypewriter();
     setupNavbarVisibility();
     setupSmoothScrolling();
+    runCode();
 });
 
 function setupTypewriter() {
@@ -23,10 +23,8 @@ function setupTypewriter() {
         element.innerHTML = fullText.substring(0, letterPos);
 
         if (!isDeleting && letterPos === fullText.length) {
-            // Finish typing
             setTimeout(() => { isDeleting = true; }, 2000);
         } else if (isDeleting && letterPos === 0) {
-            // Switch to next phrase
             isDeleting = false;
             currentPhrase = (currentPhrase + 1) % phrases.length;
             setTimeout(type, 500);
@@ -41,12 +39,12 @@ function setupTypewriter() {
 
 function setupNavbarVisibility() {
     const navbar = document.getElementById('navbar');
+    const homeHeight = document.getElementById('home').offsetHeight;
     window.addEventListener('scroll', function() {
-        const homeHeight = document.getElementById('home').offsetHeight;
         if (window.pageYOffset > homeHeight - 50) {
             navbar.style.top = "0";
         } else {
-            navbar.style.top = "-50px"; // Adjust this to fully hide the navbar
+            navbar.style.top = "-50px";
         }
     });
 }
@@ -56,8 +54,7 @@ function setupSmoothScrolling() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+            document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
         });
     });
 }
