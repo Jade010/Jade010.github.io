@@ -1,11 +1,11 @@
-ody, html {
+body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
-    background: #FFF5DE; /* Light cream background */
+    background: #808080;
     color: white; /* Sets default text color to white */
 }
 
