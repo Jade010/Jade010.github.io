@@ -1,9 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body, html {
     width: 100%;
     height: 100%;
@@ -11,6 +5,14 @@ body, html {
     scroll-behavior: smooth;
     color: black;
     background-color: white;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+}
+
+.main-content {
+    flex: 1 0 auto; /* This makes sure that the content section expands to fill available space pushing the footer down */
 }
 
 html {
@@ -156,9 +158,9 @@ li {
 }
 
 footer {
-    margin-top: auto;
-    padding: 10px 20px;
-    font-size: 12px;
-    text-align: center;
+    flex-shrink: 0; /* Prevents the footer from shrinking */
+    width: 100%;
+    padding: 20px;
     background-color: #f0f0f0;
+    text-align: center;
 }
