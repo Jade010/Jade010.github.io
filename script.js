@@ -12,20 +12,24 @@ function type() {
         letterPos++;
     }
 
-    element.innerHTML = fullText.substring(0, letterPos);
+    element.innerHTML = fullText.substring(0, letterPos) + '<span class="cursor"></span>';
+
+    let typeSpeed = 150; // Typing speed in milliseconds
+    if (isDeleting) {
+        typeSpeed /= 2; // Make backspacing faster
+    }
 
     if (!isDeleting && letterPos === fullText.length) {
-        // Finish typing
+        // Finish typing, start backspacing after a delay
         setTimeout(() => { isDeleting = true; }, 2000);
     } else if (isDeleting && letterPos === 0) {
-        // Switch to next phrase
+        // Finished backspacing, switch to the next phrase
         isDeleting = false;
         currentPhrase = (currentPhrase + 1) % phrases.length;
         setTimeout(type, 500);
-        return;
+    } else {
+        setTimeout(type, typeSpeed);
     }
-
-    setTimeout(type, isDeleting ? 100 : 150);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -48,3 +52,22 @@ function runCode() {
     
     outputElement.textContent = bio + "\n" + hobbies;
 }
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
+
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    const homeHeight = document.getElementById('home').offsetHeight;
+    if (window.pageYOffset > homeHeight - 50) {
+        navbar.classList.remove('hidden');
+    } else {
+        navbar.classList.add('hidden');
+    }
+});
