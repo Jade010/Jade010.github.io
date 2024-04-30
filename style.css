@@ -61,6 +61,47 @@ h2 {
     margin-bottom: 20px;
 }
 
+#education {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.university-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.education-container h3, .education-container p {
+    margin: 5px 0;
+}
+
+.coursework {
+    text-align: left;
+    width: 100%;
+}
+
+.course-list h5 {
+    margin-top: 20px;
+    color: #333;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+li {
+    padding-left: 10px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
