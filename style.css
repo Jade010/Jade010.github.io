@@ -31,13 +31,13 @@ body {
 }
 
 #navbar {
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 10px 20px;
+    overflow: visible;
 }
 
 .nav-item {
@@ -46,6 +46,9 @@ body {
     font-size: 18px;
     padding: 10px;
     transition: color 0.3s;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
 }
 
 .nav-item:hover {
