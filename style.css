@@ -45,15 +45,27 @@ section {
     text-align: center;
 }
 
+#home-header {
+    text-align: center;
+}
+
+
 #profile-icon {
     max-width: 300px;
     height: auto;
     border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+#typewriter-text {
+    min-height: 50px; /* Adjust based on actual content height */
 }
 
 h1 {
     font-size: 48px;
     margin-top: 20px;
+    margin-bottom: 0; /* Ensure no extra space below the name */
 }
 
 h2 {
