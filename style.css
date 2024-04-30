@@ -134,13 +134,13 @@ h2 {
 }
 
 #education .subtitle {
-    margin-bottom: 30px; /* Increase space below the 'Education' subtitle */
+    margin-bottom: 50px; 
 }
 
 .education-container {
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .education-info {
