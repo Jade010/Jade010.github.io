@@ -133,9 +133,14 @@ h2 {
     padding: 50px 20px;
 }
 
+#education .subtitle {
+    margin-bottom: 30px; /* Increase space below the 'Education' subtitle */
+}
+
 .education-container {
     max-width: 800px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .education-info {
@@ -186,11 +191,20 @@ h2 {
 
 ul {
     list-style-type: none; /* Removes default list styling */
-    padding: 0;
+    padding: 20px;
 }
 
 li {
-    padding-left: 20px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 10px;
+}
+
+li:before {
+    content: '•'; /* Custom bullet point */
+    color: #333; /* Bullet color */
+    position: absolute;
+    left: 0;
 }
 
 footer {
