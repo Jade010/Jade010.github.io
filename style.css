@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
-    background: #808080;
+    background: #505050;
     color: white; /* Sets default text color to white */
 }
 
