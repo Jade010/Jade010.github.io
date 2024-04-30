@@ -32,12 +32,20 @@ body {
 
 #navbar {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 10px 20px;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    margin-right: 20px; /* Adjust right margin for more space on the right */
 }
 
 .nav-item {
@@ -184,6 +192,6 @@ footer {
 #copyright {
     font-size: 12px; 
     margin-top: 10px;
-    color: dark grey;
+    color: grey;
 }
 
