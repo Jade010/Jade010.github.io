@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     setupTypewriter();
-    setupNavbarVisibility();
     setupSmoothScrolling();
     runCode();
 });
