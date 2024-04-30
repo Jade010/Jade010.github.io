@@ -69,6 +69,8 @@ section {
     justify-content: center;
     text-align: center;
     background-color: #f8f8f8;
+    padding: 50px 20px;
+    min-height: 100vh;
 }
 
 #home-header {
@@ -94,7 +96,7 @@ section {
     display: inline-block;
     margin-left: 5px;
     opacity: 1;
-    animation: blink 0.7s infinite;
+    animation: blink 0.9s infinite;
 }
 
 @keyframes blink {
