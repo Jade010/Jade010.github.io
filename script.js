@@ -17,8 +17,8 @@ function setupTypewriter() {
             letterPos++;
         }
 
-        element.innerHTML = fullText.substring(0, letterPos) + '<span aria-hidden="true"></span>';
-
+        element.innerHTML = fullText.substring(0, letterPos) + '<span class="cursor">|</span>';
+        
         if (!isDeleting && letterPos === fullText.length) {
             setTimeout(() => { isDeleting = true; }, 2000);
         } else if (isDeleting && letterPos === 0) {
