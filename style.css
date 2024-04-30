@@ -128,32 +128,33 @@ h2 {
 }
 
 #education {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left; 
-    width: 100%;
+    text-align: left;
     background-color: #f8f8f8;
     padding: 50px 20px;
 }
 
 .education-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 800px;
-    margin: auto;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns container items to the start */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.education-info {
+    display: flex;
+    align-items: center; /* Centers the logo and the details vertically */
 }
 
 .university-logo {
-    width: 100px;
+    width: 80px;
     margin-right: 20px;
 }
 
 .university-details {
-    align-items: flex-start;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    text-align: left; 
 }
 
 .education-container div {
@@ -167,9 +168,9 @@ h2 {
 }
 
 .coursework {
-    align-self: flex-start; 
     width: 100%; 
     margin-top: 20px; 
+    padding-left: 120px;
 }
 
 .course-list {
@@ -189,6 +190,7 @@ h2 {
 
 ul {
     list-style-position: inside;
+    padding-left: 20px;
 }
 
 li {
