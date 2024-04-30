@@ -134,13 +134,12 @@ h2 {
 }
 
 #education .subtitle {
-    margin-bottom: 50px; 
+    margin-bottom: 80px; 
 }
 
 .education-container {
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 10px;
 }
 
 .education-info {
@@ -165,9 +164,7 @@ h2 {
     
 }
 
-.education-container h3, .education-container p {
-    margin: 5px 0;
-}
+
 
 .coursework {
     width: 100%; 
