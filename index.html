@@ -1,54 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Aidoghie's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="navbar" class="hidden">
-        <a href="#home" class="nav-link">HOME</a>
-        <a href="#about" class="nav-link">ABOUT ME</a>
-        <a href="#projects" class="nav-link">PROJECTS</a>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jade Aidoghie's Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-    <section id="home" class="screen">
-        <img src="IMG_E4016.JPG" alt="Profile Picture" class="profile-img">
-        <div id="typewriter-text"></div>
-    </section>
-
-    <section id="about" class="screen">
-        <h1>About Me</h1>
-        <div class="code-container">
-            <pre id="code-block" class="code">
-import datetime
-
-class Jade:
-    def __init__(self):
-        self.name = "Jade Aidoghie"
-        self.profession = "Software Developer"
-        self.education = "BS in Computer Science"
-        self.skills = ["Python", "JavaScript", "HTML", "CSS"]
-        self.hobbies = ["Photography", "Hiking", "Gaming"]
+        <!--Navigation Bar-->
+        <div id="navbar">
+            <a href="#home" class="nav-item right">JADE AIDOGHIE</a>
+            <a href="#about" class="nav-item left">ABOUT</a>
+            <a href="#education" class="nav-item left">EDUCATION</a>
+            <a href="#projects" class="nav-item left">PROJECTS</a>
+        </div>
     
-    def get_bio(self):
-        return f"My name is {self.name}, a {self.profession}. I have a {self.education} and my skills include " + ", ".join(self.skills) + "."
-
-# Create an instance of Jade
-person = Jade()
-print(person.get_bio())
-print("Hobbies include: " + ", ".join(person.hobbies))
-            </pre>
-            <div class="output-box" id="output"></div>
-        </div>    
-    </section>
-
-    <section id="projects" class="screen">
-        <h1>Projects</h1>
-        <!-- Projects content goes here -->
-    </section>
-
-    <script src="script.js"></script>
-</body>
+        <div class="page-content">
+    
+            <!--Home Page-->
+            <section id="home">
+                <div class="container row">
+                    <div class="container row" id="landing-container">
+                        <img src="IMG_E4016.JPG" id="profile-icon">
+                        <div class="container column" id="landing-text">
+                            <h1 class="title">Jade Aidoghie</h1>
+                            <div id="typewriter-text"></div>
+                        </div>
+                    </div>
+                    <a href="#about" class="arrow"></a>
+                </div>
+            </section>
+    
+        <!--About Section-->
+        <section class="container column" id="about">
+            <h1 class="subtitle">About Me</h1>   
+        </section>
+    
+        <!--Eduction Section-->
+        <section class="container column parallax" id="education">
+            <div class="container column" id="text">
+                <h1 class="subtitle">Education</h1>
+                <div class="container row" id="education-title">
+                    <img src="wsulogo.png">
+                    <div class="container column" id="school">
+                        <h2>Washington State University, Pullman</h2>
+                        <h3>B.S. - Data Analytics, Management Information Systems</h3>
+                        <p>May 2024</p>
+                    </div>
+                </div>
+                <div class="container column" id="coursework">
+                    <h4>Relevan Coursework:</h4>
+                    <p>Data Analytics</p>
+                    <ul>
+                        <li>Introduction to Data Analytics - R (DATA 115)</li>
+                        <li>Program Design and Development - Java (CPT_S 131)</li>
+                        <li>Data Structures - Java (CPT_S 132)</li>
+                        <li>Linear Algebra (MATH 225)</li>
+                        <li>Data Structures for Data Analytics (DATA 219)</li>
+                        <li>Introduction to Python (DATA 302)</li>
+                        <li>Model-based and Data-based Methods for Data Analytics - Python (DATA 319)</li>
+                        <li>Data Repository Systems (DATA 324)</li>
+                        <li>Special Topics II - R (DATA 490)</li>
+                        <li>Probability and Statistics (STAT 360)</li>
+                        <li>Statistical Modeling for Data Analytics - R (STAT 435)</li>
+                        <li>High Dimensional Data Learning and Visualization - R (STAT 437)</li>
+                        <li>Data Analytics Ethics (PHIL 450)</li>
+                    </ul>
+                    <p>Management Information Systems</p>
+                    <ul>
+                        <li>Managing Information Technology (MIS 250)</li>
+                        <li>Enterprise Business Development - ASP.NET (MIS 325)</li>
+                        <li>Data Management - SQL (MIS 372)</li>
+                        <li>Business Intelligence - SQL (MIS 420)</li>
+                        <li>Financial Accounting (ACCTG 230)</li>
+                        <li>Microeconomics (ECONS 101)</li>
+                        <li>Econometrics (ECONS 311)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    
+    
+        <!--Projects Section-->
+            <section class="container column" id="projects">
+                <h1 class="subtitle">Projects</h1>
+    
+                <!--Filter Buttons-->
+                <div class="container row" id="buttons">
+                    <button class="filter-button active" onclick="filterSelection('all')">All</button>
+                    <button class="filter-button" onclick="filterSelection('python')">Python</button>
+                    <button class="filter-button" onclick="filterSelection('r')">R</button>
+    			    <button class="filter-button" onclick="filterSelection('java')">Java</button>
+    				<button class="filter-button" onclick="filterSelection('sql')">SQL</button>
+                    <button class="filter-button" onclick="filterSelection('tableau')">Tableau</button>
+                </div>
+    
+                <!--Individual Projects-->
+                <div class="container row" id="project-container">
+                </div>
+            </section>
+    
+            <!--Contact Information-->
+            <section class="container column" id="footer">
+                <div class="container row" id="social-container">
+                    <a href="https://www.linkedin.com/in/jade-aidoghie/" target="_blank">LinkedIn</a>
+                    <span>•</span>
+                    <a href="https://github.com/Jade010" target="_blank">Github</a>
+                    <span>•</span>
+                    <a href="https://public.tableau.com/app/profile/jade.aidoghie/vizzes" target="_blank">Tableau Public</a>
+                    <span>•</span>
+                    <a href="mailto:jaderenneea@gmail.com" target="_blank">Email</a>
+                </div>
+                <div>
+                    <p id="copyright">Created by Jade Aidoghie 2024</p>
+                </div>
+            </section>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
