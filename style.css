@@ -158,7 +158,7 @@ li {
 }
 
 footer {
-    flex-shrink: 0; /* Prevents the footer from shrinking */
+    font-size: 14px;
     width: 100%;
     padding: 20px;
     background-color: #f0f0f0;
