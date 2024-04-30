@@ -104,11 +104,11 @@ section {
     display: inline-block;
     margin-left: 5px;
     opacity: 1;
-    animation: blink 0.9s infinite;
+    animation: blink 0.85s infinite;
 }
 
 @keyframes blink {
-    20% { opacity: 0; }
+    80% { opacity: 0; }
 }
 
 h1 {
@@ -143,7 +143,7 @@ h2 {
 }
 
 .university-logo {
-    width: 50px;
+    width: 30px;
     margin-right: 20px;
 }
 
@@ -159,8 +159,15 @@ h2 {
 
 .coursework {
     text-align: left;
-    width: 100%;
-    margin-left: 50px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.coursework h4, .course-list h5 {
+    text-align: left; 
+    margin-left: 20px; 
+    color: #333; 
 }
 
 .course-list h5 {
