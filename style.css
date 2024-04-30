@@ -134,16 +134,13 @@ h2 {
 }
 
 .education-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Aligns container items to the start */
     max-width: 800px;
     margin: 0 auto;
 }
 
 .education-info {
     display: flex;
-    align-items: center; /* Centers the logo and the details vertically */
+    align-items: center; 
 }
 
 .university-logo {
@@ -169,8 +166,7 @@ h2 {
 
 .coursework {
     width: 100%; 
-    margin-top: 20px; 
-    padding-left: 120px;
+    margin-top: 20px;
 }
 
 .course-list {
@@ -189,12 +185,12 @@ h2 {
 }
 
 ul {
-    list-style-position: inside;
-    padding-left: 20px;
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
 }
 
 li {
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 footer {
