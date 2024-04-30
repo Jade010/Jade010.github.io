@@ -158,9 +158,17 @@ li {
 }
 
 footer {
-    font-size: 14px;
-    width: 100%;
     padding: 20px;
     background-color: #f0f0f0;
     text-align: center;
 }
+
+#social-container {
+    font-size: 16px; 
+}
+
+#copyright {
+    font-size: 12px; 
+    margin-top: 10px; 
+}
+
