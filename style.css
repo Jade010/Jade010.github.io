@@ -128,13 +128,14 @@ h2 {
 }
 
 #education {
-    text-align: center;
+    text-align: left;
     background-color: #f8f8f8;
     padding: 50px 20px;
 }
 
 .education-container {
     display: flex;
+    align-items: center;
     align-items: flex-start;
     max-width: 800px;
     margin: auto;
@@ -160,7 +161,9 @@ h2 {
 }
 
 .coursework {
-     margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 120px;
 }
 
 .course-list {
