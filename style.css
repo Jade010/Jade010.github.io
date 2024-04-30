@@ -108,7 +108,7 @@ section {
 }
 
 @keyframes blink {
-    80% { opacity: 0; }
+    20% { opacity: 0; }
 }
 
 h1 {
