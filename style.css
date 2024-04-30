@@ -1,4 +1,4 @@
-body, html {
+ody, html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,10 +6,11 @@ body, html {
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
     background: #FFF5DE; /* Light cream background */
+    color: white; /* Sets default text color to white */
 }
 
 #navbar {
-    background-color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for visibility */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
@@ -22,7 +23,7 @@ body, html {
 .nav-link {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: white; /* Ensure nav links are white */
     font-size: 18px;
 }
 
@@ -41,22 +42,21 @@ body, html {
     border-radius: 50%;
     border: 5px solid #FAD6A5; /* Light peach border */
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Adds spacing between the image and text */
 }
 
 #typewriter-text {
     font-size: 24px;
-    color: #333;
-    margin-top: 20px;
+    margin-top: 20px; /* Adjust spacing if needed */
+    border-right: 3px solid #333; /* Simulating the cursor */
     padding-right: 10px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid #333; /* Simulating the cursor */
-    animation: blink-cursor 0.7s steps(2, start) infinite;
+    min-height: 50px; /* Prevents layout shift */
 }
 
-@keyframes blink-cursor {
-    from, to { border-color: transparent }
-    50% { border-color: #333 }
+.code-container, .code, .output-box {
+    color: white; /* Ensures code and output text are white */
 }
 
 .arrow {
@@ -65,7 +65,7 @@ body, html {
     font-size: 24px;
     cursor: pointer;
     text-decoration: none;
-    color: #333;
+    color: white;
 }
 
 .arrow.up {
@@ -74,48 +74,5 @@ body, html {
 }
 
 .arrow:hover {
-    color: #555;
-}
-
-.code-container {
-    display: flex;
-    width: 80%;
-    height: 60vh;
-    margin-top: 20px;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.code {
-    flex: 1;
-    margin-right: 20px;
-    background-color: #282c34; /* Dark background for code area */
-    color: #abb2bf; /* Light grey text */
-    padding: 20px;
-    overflow: auto;
-    font-family: 'Courier New', Courier, monospace;
-    white-space: pre-wrap; /* Maintains whitespace formatting */
-    word-wrap: break-word;
-    border-radius: 5px;
-}
-
-.output-box {
-    flex: 1;
-    background-color: #282c34; /* Dark background for output */
-    color: #98c379; /* Green text for output to mimic console output */
-    padding: 20px;
-    overflow: auto;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    white-space: pre-wrap;
-}
-
-.cursor {
-    border-right: 2px solid #333; /* Simulates the blinking cursor */
-    padding-right: 5px;
-    animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
+    color: #ccc;
 }
