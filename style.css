@@ -46,7 +46,6 @@ body {
     font-size: 18px;
     padding: 10px;
     transition: color 0.3s;
-    justify-content: space-around;
 }
 
 .nav-item:hover {
@@ -184,6 +183,7 @@ footer {
 
 #copyright {
     font-size: 12px; 
-    margin-top: 10px; 
+    margin-top: 10px;
+    color: dark grey;
 }
 
