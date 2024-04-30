@@ -8,20 +8,15 @@ body, html {
     background: #FFF5DE; /* Light cream background */
 }
 
-.hidden {
-    display: none;
-}
-
 #navbar {
     background-color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* This ensures it stays above other content */
     text-align: center;
     padding: 10px 0;
-    transition: top 0.3s;
+    z-index: 1000; /* Ensure navbar is above all other content */
 }
 
 .nav-link {
