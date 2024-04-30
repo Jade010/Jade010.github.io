@@ -135,15 +135,20 @@ h2 {
 
 .education-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
     max-width: 800px;
     margin: auto;
 }
 
 .university-logo {
-    width: 150px;
-    margin-bottom: 20px;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.education-container div {
+    flex-grow: 1; /* Allows the text container to fill the remaining space */
 }
 
 .education-container h3, .education-container p {
@@ -153,6 +158,7 @@ h2 {
 .coursework {
     text-align: left;
     width: 100%;
+    margin-left: 50px;
 }
 
 .course-list h5 {
