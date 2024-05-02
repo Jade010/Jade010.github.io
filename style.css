@@ -84,19 +84,6 @@ section {
     text-align: center;
 }
 
-#pixel-character {
-    width: 100px;
-    height: 100px;
-    background-image: url('pixel-character.png'); /* Link to your pixel character image */
-    background-size: cover;
-    cursor: pointer;
-    animation: pixelAnim 1s infinite;
-}
-
-@keyframes pixelAnim {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
 
 .about-container {
     display: flex;
