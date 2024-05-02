@@ -179,7 +179,7 @@ h2 {
 .education-container {
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.0;
+    line-height: 0.2;
 }
 
 .education-info {
@@ -207,7 +207,7 @@ h2 {
 
 
 .coursework {
-    width: 100%; 
+    width: 80%; 
     margin-top: 20px;
 }
 
