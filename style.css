@@ -232,7 +232,7 @@ li:before {
 .button, .filter-button {
     border: 2px solid #FF5D11;
     color: #47280B;
-    background-color: transparent;
+    background-color: #FDFBF9;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
