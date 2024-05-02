@@ -80,12 +80,28 @@ section {
     min-height: 100vh;
 }
 
-#home-header {
-    text-align: center;
+.centered-container {
+    background-color: #FFDAA5; 
+    width: 80%; 
+    padding: 20px; 
+    margin: auto; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    border-radius: 10px;
 }
 
+@media (min-width: 768px) {
+    .centered-container {
+        width: 50%; /* Smaller width on larger screens */
+    }
+}
+
+
 #typewriter {
-    font-size: 60px; 
+    font-size: 30px; 
     border-right: 2px solid black; 
     white-space: pre-wrap; 
     overflow-wrap: break-word;
