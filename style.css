@@ -223,9 +223,25 @@ li:before {
     left: 0;
 }
 
+
+    .button, .filter-button {
+    border: 2px solid #FF5D11;
+    color: #47280B;
+    background-color: transparent;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover, .filter-button:hover {
+    background-color: #FF5D11;
+    color: #FDFBF9;
+}
+
+
 footer {
     padding: 20px;
-    background-color: #FFDAA5;
+    background-color: #FDFBF9;
     text-align: center;
 }
 
