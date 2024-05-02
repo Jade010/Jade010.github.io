@@ -173,7 +173,7 @@ h2 {
 }
 
 #education .subtitle {
-    margin-bottom: 10px; 
+    margin-bottom: 50px; 
 }
 
 .education-container {
@@ -209,6 +209,10 @@ h2 {
 .coursework {
     width: 80%; 
     margin-top: 20px;
+}
+
+.education-info h3, .coursework h4 {
+    margin-bottom: 5px; 
 }
 
 .course-list {
