@@ -82,7 +82,7 @@ section {
 
 .centered-container {
     background-color: #FFDAA5; 
-    width: 90%; 
+    width: 99%; 
     height: 80vh;
     padding: 20px; 
     margin: auto; 
@@ -227,7 +227,7 @@ h2 {
 }
 
 ul {
-    list-style-type: none; /* Removes default list styling */
+    list-style-type: none; 
     padding: 20px;
 }
 
