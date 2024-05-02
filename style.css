@@ -3,8 +3,8 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
-    color: black;
-    background-color: white;
+    color: #47280B;
+    background-color: #FDFBF9;
     margin: 0;
     padding: 0;
     display:flex;
@@ -37,8 +37,8 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #FDFBF9;
+    box-shadow: 0 2px 5px #FF5D11;
     padding: 10px 20px;
     z-index: 1000;
 }
@@ -50,14 +50,14 @@ body {
 
 .nav-item {
     text-decoration: none;
-    color: black;
+    color: #47280B;
     font-size: 18px;
     padding: 10px;
     transition: color 0.3s;
 }
 
 .nav-item:hover {
-    color: grey;
+    color: #FF5D11;
 }
 
 section {
@@ -75,7 +75,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #f8f8f8;
+    background-color: #FFDAA5;
     padding: 50px 20px;
     min-height: 100vh;
 }
@@ -217,7 +217,7 @@ li:before {
 
 footer {
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #FFDAA5;
     text-align: center;
 }
 
@@ -227,13 +227,13 @@ footer {
 
 #social-container a {
     text-decoration: none;
-    color: black; /* Set to the same color as your navbar links */
-    margin: 0 15px; /* Increase margin for more spacing */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    color: #47280B; 
+    margin: 0 15px; 
+    transition: color 0.3s; 
 }
 
 #social-container a:hover {
-    color: grey; /* Lighter grey color on hover, adjust as needed */
+    color: #FF5D11; 
 }
 
 #copyright {
