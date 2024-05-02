@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var typewriterText = [
         "Hi, my name is Jade.",
         "Welcome to my portfolio!",
-        "I'm a data analyst and developer."
+        "I'm a data analyst and developer.",
         "I love things with utility, so I create things with utility."
     ];
     var typingDelay = 150;
