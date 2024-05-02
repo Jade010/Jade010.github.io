@@ -82,7 +82,8 @@ section {
 
 .centered-container {
     background-color: #FFDAA5; 
-    width: 80%; 
+    width: 90%; 
+    height: 80vh;
     padding: 20px; 
     margin: auto; 
     display: flex; 
@@ -91,11 +92,12 @@ section {
     justify-content: center; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     border-radius: 10px;
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
     .centered-container {
-        width: 50%; /* Smaller width on larger screens */
+        width: 50%; 
     }
 }
 
@@ -106,6 +108,7 @@ section {
     white-space: pre-wrap; 
     overflow-wrap: break-word;
     margin: 0 auto; 
+    padding: 10px;
     animation: blinkCursor 0.8s steps(40, end) infinite; 
 }
 
@@ -133,7 +136,7 @@ section {
 }
 
 #profile-icon {
-    box-shadow: 0 6px 9px #FDFBF9;
+    box-shadow: 6px 6px 9px #FDFBF9;
     max-width: 300px;
     width: 40%;
     height: auto;
@@ -155,7 +158,7 @@ h1 {
 
 #home h1, #profile-icon {
     transition: all 0.3s ease;
-    transform: translateY(0); /* Keeps text and image vertically centered */
+    transform: translateY(0); 
 }
 
 h2 {
