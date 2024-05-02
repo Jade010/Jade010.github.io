@@ -220,13 +220,9 @@ h2 {
 .coursework h4, .course-list h5 {
     text-align: left; 
     margin-left: 20px; 
-    color: #333; 
+    color: #47280B; 
 }
 
-.course-list h5 {
-    margin-top: 20px;
-    color: #333;
-}
 
 ul {
     list-style-type: none; 
