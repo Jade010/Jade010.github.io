@@ -76,7 +76,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #FDFBF9; /* Lighter background (Background 1) */
+    background-color: #FDFBF9; 
     padding: 50px 20px;
     min-height: 100vh;
 }
@@ -100,7 +100,7 @@ section {
 }
 
 #about {
-    background-color: ##FF5D11;
+    background-color: ##FFDAA5;
 }
 
 .about-container {
@@ -223,7 +223,7 @@ li:before {
 
 
 #projects {
-    background-color: ##FF5D11;
+    background-color: ##FFDAA5;
 }
 
 .button, .filter-button {
