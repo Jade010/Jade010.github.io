@@ -170,6 +170,8 @@ h2 {
     text-align: left;
     background-color: #FDFBF9;
     padding: 50px 20px;
+    align-items: flex-start; 
+    justify-content: flex-start;
 }
 
 #education .subtitle {
