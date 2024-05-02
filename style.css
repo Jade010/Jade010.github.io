@@ -11,6 +11,14 @@ body, html {
     flex-direction:column;
 }
 
+#home, #education {
+    background-color: #FDFBF9; 
+}
+
+#about, #projects {
+    background-color: #FFDAA5; 
+
+
 .main-content {
     flex: 1 0 auto; 
 }
@@ -75,7 +83,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #FFDAA5;
+    background-color: #FDFBF9; /* Lighter background (Background 1) */
     padding: 50px 20px;
     min-height: 100vh;
 }
