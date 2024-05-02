@@ -90,7 +90,7 @@ section {
     white-space: nowrap; 
     overflow: hidden;
     margin: 0 auto; 
-    animation: blinkCursor 0.75s steps(40, end) infinite; 
+    animation: blinkCursor 0.8s steps(40, end) infinite; 
 }
 
 @keyframes blinkCursor {
