@@ -94,22 +94,6 @@ section {
     margin: 0 auto;
 }
 
-#typewriter-text {
-    display: inline-block;
-    min-width: 250px; /* This width can be adjusted based on the average length of your phrases */
-    height: auto;
-}
-
-.cursor {
-    display: inline-block;
-    margin-left: 5px;
-    opacity: 1;
-    animation: blink 0.85s infinite;
-}
-
-@keyframes blink {
-    20% { opacity: 0; }
-}
 
 h1 {
     font-size: 48px;
