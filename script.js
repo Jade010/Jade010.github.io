@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     var typewriterText = [
-        "Hi, my name is Jade.",
         "Welcome to my portfolio!",
-        "I'm a data analyst and developer.",
         "I love things with utility, so I create things with utility."
     ];
-    var typingDelay = 100;
+    var typingDelay = 50;
     var erasingDelay = 75;
     var newTextDelay = 2000; // Delay between current and next text
     var textArrayIndex = 0;
