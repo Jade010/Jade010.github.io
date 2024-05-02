@@ -117,6 +117,7 @@ section {
 }
 
 #profile-icon {
+    box-shadow: 0 2px 5px #FF5D11;
     max-width: 300px;
     width: 40%;
     height: auto;
