@@ -85,15 +85,29 @@ section {
     text-align: center;
 }
 
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 50px 20px;
+}
 
 #profile-icon {
     max-width: 300px;
+    width: 40%;
     height: auto;
     border-radius: 50%;
-    display: block;
-    margin: 0 auto;
+    margin-right: 20px;
 }
 
+.about-text {
+    flex: 1; 
+    text-align: left; 
+    padding: 0 20px; 
+}
 
 h1 {
     font-size: 48px;
