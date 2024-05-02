@@ -170,8 +170,6 @@ h2 {
     text-align: left;
     background-color: #FDFBF9;
     padding: 50px 20px;
-    align-items: flex-start; 
-    justify-content: flex-start;
 }
 
 #education .subtitle {
@@ -179,9 +177,10 @@ h2 {
 }
 
 .education-container {
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
     line-height: 1.5;
+    align-items: flex-start;
 }
 
 .education-info {
