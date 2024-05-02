@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     var typewriterText = [
-        "Hi, my name is Jade",
+        "Hi, my name is Jade.",
         "Welcome to my portfolio!",
-        "I'm a data analyst with a passion for database development",
-        "I love things with utility so I create things with utility"
+        "I'm a data analyst and developer."
+        "I love things with utility, so I create things with utility."
     ];
     var typingDelay = 150;
     var erasingDelay = 75;
