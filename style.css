@@ -84,6 +84,19 @@ section {
     text-align: center;
 }
 
+#typewriter {
+    font-size: 24px; 
+    border-right: 2px solid black; 
+    white-space: nowrap; 
+    overflow: hidden;
+    margin: 0 auto; 
+    animation: blinkCursor 0.75s steps(40, end) infinite; 
+}
+
+@keyframes blinkCursor {
+    from, to { border-color: transparent }
+    50% { border-color: black }
+}
 
 .about-container {
     display: flex;
