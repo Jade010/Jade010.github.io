@@ -11,13 +11,6 @@ body, html {
     flex-direction:column;
 }
 
-#home, #education {
-    background-color: #FDFBF9; 
-}
-
-#about, #projects {
-    background-color: #FFDAA5; 
-}
 
 .main-content {
     flex: 1 0 auto; 
