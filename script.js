@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "I'm a data analyst and developer.",
         "I love things with utility, so I create things with utility."
     ];
-    var typingDelay = 150;
+    var typingDelay = 100;
     var erasingDelay = 75;
     var newTextDelay = 2000; // Delay between current and next text
     var textArrayIndex = 0;
