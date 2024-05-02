@@ -179,7 +179,7 @@ h2 {
 .education-container {
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.5;
+    line-height: 0.1;
 }
 
 .education-info {
@@ -196,7 +196,7 @@ h2 {
     display: flex;
     flex-direction: column;
     text-align: left; 
-    line-height: 0.1; 
+    line-height: 5.1; 
 }
 
 .education-container div {
