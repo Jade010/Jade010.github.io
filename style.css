@@ -211,9 +211,6 @@ h2 {
     margin-top: 20px;
 }
 
-.education-info h3, .coursework h4 {
-    margin-bottom: 0.1px; 
-}
 
 .course-list {
     padding-left: 0; 
@@ -232,11 +229,11 @@ h2 {
 
 ul {
     list-style-type: none; 
-    padding: 20px;
+    padding-top: 0;
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     position: relative;
     padding-left: 10px;
 }
