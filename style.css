@@ -85,7 +85,7 @@ section {
 }
 
 #typewriter {
-    font-size: 50px; 
+    font-size: 60px; 
     border-right: 2px solid black; 
     white-space: nowrap; 
     overflow: hidden;
