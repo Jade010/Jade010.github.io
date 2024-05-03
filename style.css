@@ -209,13 +209,17 @@ h2 {
 
 
 .coursework {
-    width: 80%; 
     margin-top: 20px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    width: 100%; 
 }
 
 
 .course-list {
-    padding-left: 0; 
+    width:48%;
+    padding: 0 20px; 
 }
 
 .coursework h4, .course-list h5 {
