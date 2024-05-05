@@ -209,10 +209,6 @@ h2 {
 
 
 .coursework {
-    margin-top: 20px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
     width: 100%; 
     text-align: left; 
 }
@@ -231,6 +227,7 @@ h2 {
 .coursework h4, .course-list h5 {
     text-align: left; 
     margin-left: 20px; 
+    margin-bottom: 20px;
     color: #47280B; 
 }
 
