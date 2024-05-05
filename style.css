@@ -214,8 +214,14 @@ h2 {
     justify-content: space-between; 
     align-items: flex-start; 
     width: 100%; 
+    text-align: left; 
 }
 
+.courses-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start;
+}
 
 .course-list {
     width:48%;
