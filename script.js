@@ -35,3 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(type, newTextDelay + 250);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.filter-button');
+    const projects = document.querySelectorAll('.project-card');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tag = this.getAttribute('data-tag');
+            projects.forEach(project => {
+                if (project.getAttribute('data-tags').includes(tag) || tag === 'all') {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+});
