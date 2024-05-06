@@ -278,33 +278,53 @@ li:before {
 }
 
 .project-card {
-    width: 30%;
-    background-color: #FDFBF9; 
-    color: #47280B;
-    text-decoration: none;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    border: 1px solid #FFDAA5;
+    width: calc(33.333% - 20px); 
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    text-align: center;
 }
 
 .project-card:hover .project-details {
-    display: block; 
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-image {
+    width: 100%;
+    display: block;
 }
 
 .project-info, .project-details {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    color: #47280B;
 }
 
 .project-details {
-    display: none; 
-    background-color: #FFFFFF; 
+    background-color: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
 }
 
 .tags {
-    font-size: 0.8em;
-    color: #FF5D11; 
+    background-color: #FFDAA5;
+    color: #47280B;
+    padding: 5px;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 0.8em; 
 }
 
 footer {
