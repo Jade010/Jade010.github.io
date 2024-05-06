@@ -272,19 +272,28 @@ li:before {
 
 
 .project-container {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+    padding: 20px;  
 }
 
 .project-card {
-    width: calc(33.333% - 20px); 
-    margin: 10px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-    text-align: center;
+    background-color: #FDFBF9; 
+    color: #47280B; 
+    text-decoration: none;
+    border: 1px solid #FFDAA5; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+    position: relative; /* Needed for absolute positioning inside */
+    display: flex;
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    height: 300px; /* Fixed height */
 }
 
 .project-card:hover .project-details {
@@ -293,17 +302,19 @@ li:before {
 }
 
 .project-image {
-    width: 100%;
-    display: block;
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
 }
 
-.project-info, .project-details {
+
+.project-info {
     padding: 10px;
-    color: #47280B;
+    text-align: center;
 }
 
 .project-details {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     position: absolute;
     top: 0;
     left: 0;
@@ -311,21 +322,27 @@ li:before {
     bottom: 0;
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s; /* Delays hiding visibility */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s;
+}
+
+.project-card:hover .project-details {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s; /* Makes transition instant when hovering */
 }
 
 .tags {
     background-color: #FFDAA5;
     color: #47280B;
     padding: 5px;
+    border-radius: 5px; /* Rounded corners for the tag */
     margin-top: 10px;
-    display: inline-block;
-    font-size: 0.8em; 
+    font-size: 0.8em;
 }
+
 
 footer {
     padding: 20px;
