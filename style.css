@@ -271,6 +271,42 @@ li:before {
 }
 
 
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project-card {
+    width: 30%;
+    background-color: #FDFBF9; 
+    color: #47280B;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    border: 1px solid #FFDAA5;
+}
+
+.project-card:hover .project-details {
+    display: block; 
+}
+
+.project-info, .project-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-details {
+    display: none; 
+    background-color: #FFFFFF; 
+}
+
+.tags {
+    font-size: 0.8em;
+    color: #FF5D11; 
+}
+
 footer {
     padding: 20px;
     background-color: #FDFBF9;
