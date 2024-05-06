@@ -331,7 +331,7 @@ li:before {
 }
 
 .project-details {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.9); 
     opacity: 0;
     visibility: hidden;
     z-index: 0; 
