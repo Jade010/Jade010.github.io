@@ -30,6 +30,8 @@ body {
     flex-direction: column; 
 }
 
+
+/**Navigation Bar**/
 #navbar {
     position: fixed;
     top: 0;
@@ -69,6 +71,7 @@ section {
     justify-content: center;
 }
 
+/**Home Page**/
 #home {
     display: flex;
     flex-direction: column;
@@ -101,7 +104,6 @@ section {
     }
 }
 
-
 #typewriter {
     font-size: 30px; 
     border-right: 2px solid black; 
@@ -117,6 +119,8 @@ section {
     50% { border-color: black }
 }
 
+
+/**About Me Page**?
 .about .subtitle {
     margin-bottom: 50px; 
 }
@@ -166,6 +170,8 @@ h2 {
     margin-bottom: 20px;
 }
 
+
+/**Education Page**/
 #education {
     text-align: left;
     background-color: #FDFBF9;
@@ -205,7 +211,6 @@ h2 {
     width: 100%; 
     
 }
-
 
 
 .coursework {
@@ -251,10 +256,11 @@ li:before {
 }
 
 
-
+/**Project Page**/
 #projects {
     background-color: #FFDAA5;
 }
+
 
 .button, .filter-button {
     border: 2px solid #FF5D11;
@@ -347,6 +353,7 @@ li:before {
 }
 
 
+/**Footer**/
 footer {
     padding: 20px;
     background-color: #FDFBF9;
