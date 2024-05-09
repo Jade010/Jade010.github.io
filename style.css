@@ -257,10 +257,10 @@ li:before {
 
 
 /**Project Page**/
+
 #projects {
     background-color: #FFDAA5;
 }
-
 
 .button, .filter-button {
     border: 2px solid #FF5D11;
@@ -275,7 +275,6 @@ li:before {
     background-color: #FF5D11;
     color: #FDFBF9;
 }
-
 
 .project-container {
     display: grid;
