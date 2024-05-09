@@ -260,10 +260,10 @@ li:before {
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px; 
-    padding: 20px;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; 
 }
 
 .project-card {
