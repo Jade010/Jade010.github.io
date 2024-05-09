@@ -15,22 +15,6 @@ body, html {
     flex: 1 0 auto; 
 }
 
-html {
-    height: 100%; 
-}
-
-body {
-    width: 100%;
-    min-height: 100%; 
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-    color: #47280B;
-    background-color: white;
-    display: flex;
-    flex-direction: column; 
-}
-
-
 /**Navigation Bar**/
 #navbar {
     position: fixed;
