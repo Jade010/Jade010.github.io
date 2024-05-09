@@ -39,14 +39,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
 
+    // Event listener for each button
     buttons.forEach(button => {
         button.addEventListener('click', function() {
-            const tag = this.getAttribute('data-tag');
+            const filter = this.getAttribute('data-tag'); // Get the filter tag from the button
             projects.forEach(project => {
-                if (project.getAttribute('data-tags').includes(tag) || tag === 'all') {
-                    project.style.display = 'block';
+                // Check if the project has the tag or if the filter is 'all'
+                if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
+                    project.style.display = 'flex'; // Show project
                 } else {
-                    project.style.display = 'none';
+                    project.style.display = 'none'; // Hide project
                 }
             });
         });
