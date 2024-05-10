@@ -245,11 +245,6 @@ li:before {
     background-color: #FFDAA5;
 }
 
-.button.active, .filter-button.active {
-    background-color: #FF5D11;
-    color: #FDFBF9;
-}
-
 .button, .filter-button {
     border: 2px solid #FF5D11;
     color: #47280B;
@@ -264,13 +259,16 @@ li:before {
     color: #FDFBF9;
 }
 
+.button.active, .filter-button.active {
+    background-color: #FF5D11;
+    color: #FDFBF9;
+}
+
 .project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-gap: 20px; 
     padding: 20px;
-    margin: auto;
-    max-width: 960px;
 }
 
 .project-card {
@@ -280,13 +278,14 @@ li:before {
     border: 1px solid #FFDAA5;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    overflow: hidden; 
+    position: relative; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow: hidden;
-    height: 300px; 
+    width: 300px;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    height: 300px;
 }
 
 .project-info, .project-details {
