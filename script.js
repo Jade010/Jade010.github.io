@@ -39,9 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
 
-    // Event listener for each button
     buttons.forEach(button => {
         button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            buttons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to the clicked button
+            this.classList.add('active');
             const filter = this.getAttribute('data-tag'); // Get the filter tag from the button
             projects.forEach(project => {
                 // Check if the project has the tag or if the filter is 'all'
