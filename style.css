@@ -284,17 +284,6 @@ li:before {
     height: 300px; 
 }
 
-.project-card:hover .project-details {
-    opacity: 1;
-    visibility: visible;
-}
-
-.project-image {
-    width: 100%; 
-    height: 150px; 
-    object-fit: cover; 
-}
-
 .project-info, .project-details {
     position: absolute;
     top: 0;
@@ -305,19 +294,25 @@ li:before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.3s;
     padding: 10px;
+    z-index: 1;
 }
 
-.project-info {
-    z-index: 1;
+.project-card:hover .project-details {
+    opacity: 1;
+    visibility: visible;
 }
 
 .project-details {
     background-color: rgba(255, 255, 255, 0.9); 
     opacity: 0;
     visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s ease; 
     z-index: 0; 
+}
+
+.project-info {
+    z-index: 1;
 }
 
 .project-card:hover .project-details {
