@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     var typewriterText = [
-        "Jade Aidoghie",
-        "a data analyst and developer."
-        "passionate about driving innovation through creative design."
+        "I'm a data analyst and developer.",
+        "I'm passionate about creative design and streamlining processes.",
+        "I design practical solutions for everyday challenges, turning data into direction."
     ];
     var typingDelay = 50;
     var erasingDelay = 60;
