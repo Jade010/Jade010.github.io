@@ -69,16 +69,31 @@ section {
 
 .centered-container {
     background-color: #FFDAA5; 
-    width: 100%; 
+    width: 90%;
+    max-width: 1200px; 
     height: 70vh;
     padding: 40px; 
     margin: auto; 
     display: flex; 
-    flex-direction: column; 
+    flex-direction: row; 
     align-items: center; 
-    justify-content: center; 
+    justify-content: space-between; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
     border-radius: 10px;
+}
+
+.text-container {
+    flex: 1;
+    padding-right: 20px; 
+}
+
+#profile-icon {
+    box-shadow: 6px 6px 9px #47280B;
+    max-width: 300px;
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
 }
 
 @media (min-width: 768px) {
@@ -122,14 +137,6 @@ section {
     padding: 50px 20px;
 }
 
-#profile-icon {
-    box-shadow: 6px 6px 9px #47280B;
-    max-width: 300px;
-    width: 40%;
-    height: auto;
-    border-radius: 50%;
-    margin-right: 20px;
-}
 
 .about-text {
     flex: 1; 
