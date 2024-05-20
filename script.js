@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     var typewriterText = [
-        "Welcome to my portfolio!",
-        "I love things with utility, so I create things with utility."
+        "Jade Aidoghie",
+        "a data analyst and developer."
+        "passionate about driving innovation through creative design."
     ];
     var typingDelay = 50;
     var erasingDelay = 60;
-    var newTextDelay = 2000; // Delay between current and next text
+    var newTextDelay = 2000; 
     var textArrayIndex = 0;
     var charIndex = 0;
     var typedText = document.getElementById('typewriter');
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             buttons.forEach(btn => btn.classList.remove('active'));
             // Add active class to the clicked button
             this.classList.add('active');
-            const filter = this.getAttribute('data-tag'); // Get the filter tag from the button
+            const filter = this.getAttribute('data-tag');
             projects.forEach(project => {
                 // Check if the project has the tag or if the filter is 'all'
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
