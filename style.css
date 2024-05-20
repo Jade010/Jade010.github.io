@@ -67,24 +67,11 @@ section {
     min-height: 100vh;
 }
 
-.centered-container {
-    background-color: #FFDAA5; 
-    width: 90%;
-    max-width: 1200px; 
-    height: 70vh;
-    padding: 40px; 
-    margin: auto; 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: space-between; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-    border-radius: 10px;
-}
 
 .text-container {
     flex: 1;
     padding-right: 20px; 
+    text-align: left;
 }
 
 #profile-icon {
@@ -96,11 +83,6 @@ section {
     object-fit: cover;
 }
 
-@media (min-width: 768px) {
-    .centered-container {
-        width: 50%; 
-    }
-}
 
 #typewriter {
     font-size: 30px; 
