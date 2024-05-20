@@ -102,13 +102,8 @@ section {
     overflow-wrap: break-word;
     margin-top: 20px;
     padding: 10px;
-    animation: blinkCursor 0.8s steps(40, end) infinite; 
 }
 
-@keyframes blinkCursor {
-    from, to { border-color: transparent }
-    50% { border-color: black }
-}
 
 
 /**About Me Page**/
