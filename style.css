@@ -95,17 +95,6 @@ section {
 }
 
 
-#typewriter {
-    font-size: 30px; 
-    border-right: none; 
-    white-space: pre-wrap; 
-    overflow-wrap: break-word;
-    margin-top: 20px;
-    padding: 10px;
-    height: 60px;
-}
-
-
 
 /**About Me Page**/
 .about .subtitle {
