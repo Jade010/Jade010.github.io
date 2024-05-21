@@ -42,6 +42,18 @@ body, html {
     transition: color 0.3s;
 }
 
+.nav-download {
+    text-decoration: none;
+    color: #FF5D11;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.nav-download:hover {
+    color: #47280B;
+}
+
 .nav-item:hover {
     color: #FF5D11;
 }
