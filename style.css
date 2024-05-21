@@ -58,7 +58,7 @@ section {
 /**Home Page**/
 #home {
     background-color: #FDFBF9; 
-    padding: 50px 20px;
+    padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,18 +66,15 @@ section {
 
 .home-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
 }
 
 
 .text-container {
-    padding-right: 20px; 
-    text-align: left;
-    padding-left: 20px; 
-    position: relative;
+    text-align: left; 
+    flex: 1;
+    margin: 0;
 }
 
 .text-background {
@@ -97,36 +94,23 @@ section {
 #profile-icon {
     box-shadow: 6px 6px 9px #47280B;
     max-width: 600px;
-    width: 80vw;
+    width: 50vw;
     height: auto;
     border-radius: 10px;
-    object-fit: cover;
     transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
+    .text-container, .picture-box {
+        flex: 100%; 
+    }
+
     #profile-icon {
-        width: 80vw; 
-    }
-    .text-container h2 {
-        font-size: 28px; 
-    }
-    .text-container p {
-        font-size: 14px; 
+        width: 80%; 
+        margin: 0 auto; 
     }
 }
 
-@media (max-width: 480px) {
-    #profile-icon {
-        width: 85vw; 
-    }
-    .text-container h2 {
-        font-size: 24px; 
-    }
-    .text-container p {
-        font-size: 12px; 
-    }
-}
 
 
 /**About Me Page**/
