@@ -419,6 +419,13 @@ textarea {
     border-radius: 4px;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #FF5D11; 
+    box-shadow: 0 0 8px #FF5D11; 
+}
+
 textarea {
     height: 150px;
     resize: none; 
