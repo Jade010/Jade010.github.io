@@ -93,12 +93,13 @@ section {
     justify-content: center;
     align-items: center;
     padding: 10px;
+    max-width: 50%;
 }
 
 #profile-icon {
     box-shadow: 3px 3px 6px #47280B;
-    max-width: 100%;
-    width: auto;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 10px;
 }
