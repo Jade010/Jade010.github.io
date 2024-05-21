@@ -74,9 +74,9 @@ section {
 
 
 .text-container {
-    flex: 1;
     padding-right: 20px; 
     text-align: left;
+    position: relative;
 }
 
 .picture-box {
@@ -102,6 +102,7 @@ section {
     overflow-wrap: break-word;
     margin-top: 20px;
     padding: 10px;
+    height: 60px;
 }
 
 
