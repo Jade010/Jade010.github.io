@@ -91,6 +91,7 @@ section {
     justify-content: center;
     align-items: center;
     max-width: 50%;
+    overflow: visible;
 }
 
 #profile-icon {
