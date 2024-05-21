@@ -409,7 +409,7 @@ textarea {
 
 textarea {
     height: 150px;
-    resize: none; /* Prevents resizing the textarea */
+    resize: none; 
 }
 
 .submit-button {
@@ -426,12 +426,15 @@ textarea {
     background-color: #E04E10;
 }
 
+.socials-container {
+    text-align: center; 
+    margin-top: 20px;
+}
 
 .socials-animate {
     font-size: 24px;
-    display: flex;
+    display: inline-block;;
     justify-content: center;
-    margin-top: 20px;
 }
 
 .socials-animate span {
@@ -451,8 +454,9 @@ textarea {
 
 .down-arrow {
     cursor: pointer;
-    display: inline-block;
-    margin-left: 5px;
+    display: block;
+    margin: 10px auto 0; 
+    font-size: 32px;
 }
 
 @keyframes wave {
