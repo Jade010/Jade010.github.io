@@ -384,15 +384,15 @@ li:before {
     padding: 40px 20px; 
     display: flex; 
     background-color: #FFF;
-    padding: 40px 20px;
     text-align: center;
+    position: relative;
 }
 
 .contact-container {
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
-    margin: 0 auto;
     padding: 20px;
+    margin-top: 20px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: #ffffff;
     border-radius: 8px;
@@ -446,9 +446,10 @@ textarea {
 }
 
 .socials-container {
+    position: absolute;
+    bottom: 10px; 
     width: 100%;
     text-align: center; 
-    margin-top: auto;
 }
 
 .socials-animate {
@@ -476,8 +477,9 @@ textarea {
 .down-arrow {
     cursor: pointer;
     display: block;
-    margin: 10px auto 0; 
-    font-size: 32px;
+    margin: 20px auto 0; 
+    width: 50px;
+    height: auto;
 }
 
 @keyframes wave {
