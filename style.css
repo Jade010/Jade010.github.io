@@ -97,7 +97,7 @@ section {
 
 #typewriter {
     font-size: 30px; 
-    border-right: 2px solid black; 
+    border-right: none; 
     white-space: pre-wrap; 
     overflow-wrap: break-word;
     margin-top: 20px;
