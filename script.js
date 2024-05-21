@@ -4,20 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
         "I'm passionate about creative design and streamlining processes.",
         "I design practical solutions for everyday challenges, turning data into direction."
     ];
-    var typingDelay = 50;
-    var erasingDelay = 60;
-    var newTextDelay = 2000; 
-    var textArrayIndex = 0;
-    var charIndex = 0;
-    var typedText = document.getElementById('typewriter');
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    const typedText = document.getElementById('typewriter');
 
     function type() {
         if (charIndex < typewriterText[textArrayIndex].length) {
             typedText.textContent += typewriterText[textArrayIndex].charAt(charIndex);
             charIndex++;
-            setTimeout(type, typingDelay);
+            setTimeout(type, 50);
         } else {
-            setTimeout(erase, newTextDelay);
+            setTimeout(erase, 2000);
         }
     }
 
@@ -25,15 +22,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (charIndex > 0) {
             typedText.textContent = typewriterText[textArrayIndex].substring(0, charIndex-1);
             charIndex--;
-            setTimeout(erase, erasingDelay);
+            setTimeout(erase, 60);
         } else {
-            textArrayIndex++;
-            if (textArrayIndex >= typewriterText.length) textArrayIndex = 0;
-            setTimeout(type, typingDelay + 1100);
+            textArrayIndex = (textArrayIndex + 1) % typewriterText.length;
+            setTimeout(type, 1100);
         }
     }
 
-    setTimeout(type, newTextDelay + 250);
+    setTimeout(type, 250);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
