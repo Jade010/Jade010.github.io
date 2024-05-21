@@ -133,7 +133,7 @@ section {
     width: 100%;
     max-width: 1200px; 
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 20px;
 }
 
 
@@ -160,17 +160,19 @@ h2 {
 }
 
 .interests-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .interest-item {
-    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px;
     text-align: center;
-    margin: 10px;
 }
 
 .interest-item img {
