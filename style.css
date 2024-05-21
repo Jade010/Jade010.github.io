@@ -127,9 +127,6 @@ section {
 }
 
 .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
     max-width: 1200px; 
     margin: 0 auto;
@@ -140,7 +137,7 @@ section {
 .about-text {
     flex: 1; 
     text-align: left; 
-    padding: 0 20px; 
+    margin-bottom: 20px 
 }
 
 h1 {
