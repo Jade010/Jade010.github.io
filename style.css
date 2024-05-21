@@ -50,6 +50,10 @@ body, html {
     transition: color 0.3s;
 }
 
+.nav-download:hover {
+    background-color: #E04E10;
+}
+
 
 
 .nav-item:hover {
