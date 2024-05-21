@@ -20,3 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function scrollToFooter() {
+    document.querySelector('footer').scrollIntoView({
+        behavior: 'smooth'
+    });
+}
