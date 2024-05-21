@@ -61,7 +61,7 @@ section {
     background-color: #FDFBF9; 
     padding: 50px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -74,6 +74,8 @@ section {
 
 .text-container {
     text-align: center; 
+    justify-content: space-between;
+    align-items: center;
     flex: 1;
     margin: 0;
 }
