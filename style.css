@@ -169,7 +169,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.interests-container {
+.interest-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
