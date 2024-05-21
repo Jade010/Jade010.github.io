@@ -371,6 +371,62 @@ li:before {
 }
 
 
+/* Contact Section Styling */
+#contact {
+    background-color: #FFF;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #FDFBF9;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #47280B;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 150px;
+    resize: none; /* Prevents resizing the textarea */
+}
+
+.submit-button {
+    background-color: #FF5D11;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submit-button:hover {
+    background-color: #E04E10;
+}
+
+
 /**Footer**/
 footer {
     padding: 20px;
