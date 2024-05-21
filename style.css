@@ -427,6 +427,40 @@ textarea {
 }
 
 
+.socials-animate {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.socials-animate span {
+    animation: wave 2s infinite;
+    display: inline-block;
+    margin-right: 2px;
+}
+
+/* Individual animation delays for each letter for the wave effect */
+.socials-animate span:nth-child(1) { animation-delay: 0s; }
+.socials-animate span:nth-child(2) { animation-delay: 0.1s; }
+.socials-animate span:nth-child(3) { animation-delay: 0.2s; }
+.socials-animate span:nth-child(4) { animation-delay: 0.3s; }
+.socials-animate span:nth-child(5) { animation-delay: 0.4s; }
+.socials-animate span:nth-child(6) { animation-delay: 0.5s; }
+.socials-animate span:nth-child(7) { animation-delay: 0.6s; }
+
+.down-arrow {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
 /**Footer**/
 footer {
     padding: 20px;
