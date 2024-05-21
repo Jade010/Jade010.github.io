@@ -371,8 +371,14 @@ li:before {
 }
 
 
-/* Contact Section Styling */
+/* Contact Section */
 #contact {
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    min-height: 100vh; 
+    padding: 40px 20px; 
+    display: flex; 
     background-color: #FFF;
     padding: 40px 20px;
     text-align: center;
@@ -380,10 +386,12 @@ li:before {
 
 .contact-container {
     max-width: 600px;
+    width: 100%;
     margin: 0 auto;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-color: #FDFBF9;
+    background-color: #ffffff;
+    border-radius: 8px;
 }
 
 .form-group {
@@ -427,8 +435,9 @@ textarea {
 }
 
 .socials-container {
+    width: 100%;
     text-align: center; 
-    margin-top: 20px;
+    margin-top: auto;
 }
 
 .socials-animate {
@@ -441,6 +450,7 @@ textarea {
     animation: wave 2s infinite;
     display: inline-block;
     margin-right: 2px;
+    font-size: 24px;
 }
 
 /* Individual animation delays for each letter for the wave effect */
