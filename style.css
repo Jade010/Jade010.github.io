@@ -60,26 +60,28 @@ section {
     background-color: #FDFBF9; 
     padding: 50px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .home-content {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
 
 .text-container {
-    text-align: left; 
+    text-align: center; 
     flex: 1;
     margin: 0;
+    max-width: 50%;
 }
 
 .text-background {
     background-color: #FFDAA5; 
-    padding: 15px; 
+    padding: 10px; 
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
@@ -93,21 +95,23 @@ section {
 
 #profile-icon {
     box-shadow: 6px 6px 9px #47280B;
-    max-width: 600px;
-    width: 50vw;
+    max-width: 50vw;
+    width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
+    #home {
+        flex-direction: column; 
+    }
+
     .text-container, .picture-box {
-        flex: 100%; 
+        max-width: 100%; 
     }
 
     #profile-icon {
-        width: 80%; 
-        margin: 0 auto; 
+        max-width: 100%; 
     }
 }
 
