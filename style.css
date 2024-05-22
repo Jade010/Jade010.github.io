@@ -79,6 +79,11 @@ section {
     margin: 10px;
 }
 
+#education .subtitle, 
+#contact .subtitle {
+    margin-top: 70px;
+}
+
 /**Home Page**/
 #home {
     padding-top: 70px;
