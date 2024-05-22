@@ -15,22 +15,6 @@ body, html {
     flex: 1 0 auto; 
 }
 
-.subtitle-fixed {
-    position: -webkit-sticky; 
-    position: sticky;
-    top: 60px; 
-    background-color: inherit;
-    z-index: 100;
-    padding: 10px 0;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #FF5D11;
-}
-
-
-section {
-    padding-top: 120px; 
-}
 
 /**Navigation Bar**/
 #navbar {
@@ -71,19 +55,17 @@ section {
     color: #A03B0C;
 }
 
-
-
 .nav-item:hover {
     color: #FF5D11;
 }
 
 section {
-    padding: 50px 20px;
+    padding: 70 px 20px 50px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 /**Home Page**/
