@@ -239,14 +239,14 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 600px;
     width: 70%;
     
 }
 
 #map {
-    height: 500px;
-    width: 90%;
+    height: 550px;
+    width: 100%;
     max-width: 1200px;
     border-radius: 8px;
 }
