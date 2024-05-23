@@ -82,6 +82,10 @@ section {
     margin: 10px;
 }
 
+#contact .subtitle {
+    margin-bottom: 20px;
+}
+
 #education .subtitle, 
 #contact .subtitle {
     margin-top: 70px;
