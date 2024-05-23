@@ -377,7 +377,8 @@ li:before {
     min-height: 100vh; 
     padding: 40px 20px; 
     display: flex; 
-    background-color: #FFF;
+    background: url('your-image-path.jpg') no-repeat center center;
+    background-size: cover;
     text-align: center;
     position: relative;
 }
@@ -390,6 +391,7 @@ li:before {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: #ffffff;
     border-radius: 8px;
+    background-color: #FDFBF9;
 }
 
 .form-group {
