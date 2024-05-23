@@ -22,10 +22,10 @@ body, html {
     box-sizing: border-box;
 }
 
-/* elements don't overflow */
+/* Making sure elements don't overflow */
 .container {
-    max-width: 100%; /* Ensure any container does not exceed 100% width */
-    overflow-x: hidden; /* Prevent overflow within containers */
+    max-width: 100%; 
+    overflow-x: hidden; 
 }
 
 
