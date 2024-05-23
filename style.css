@@ -329,7 +329,7 @@ li:before {
     color: #47280B;
     text-decoration: none;
     transition: transform 0.3s ease;
-    overflow: auto; 
+    overflow-y: auto; 
     position: relative; 
     display: flex;
     width: 300px;
@@ -341,7 +341,6 @@ li:before {
     padding: 10px; 
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-size: clamp(12px, 2vw, 18px);
 }
 
 .project-info, .project-details {
