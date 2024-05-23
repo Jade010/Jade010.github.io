@@ -210,6 +210,9 @@ h2 {
     margin-bottom: 5px;
 }
 
+interest-item h3 {
+    margin-bottom: 0; 
+}
 
 
 /**Education Page**/
