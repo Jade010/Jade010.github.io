@@ -1,27 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-     // Initialize the map
-    var map = L.map('map').setView([47.5, -120.5], 7); // Centered on Washington state
-
-    // Set up the OSM layer
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-    }).addTo(map);
-
-    // Add markers for educational institutions
-    var pierceMarker = L.marker([47.1717, -122.5185], { color: 'red' }).addTo(map)
-        .bindPopup('<b>Pierce College Fort Steilacoom, Lakewood, WA</b><br>Associate of Arts (AA) in Pre-Nursing<br>June 2020');
-
-    var wsuMarker = L.marker([46.7298, -117.1817], { color: 'red' }).addTo(map)
-        .bindPopup('<b>Washington State University, Pullman, WA</b><br>Bachelor of Science (B.S.) in Data Analytics, Minor in Business<br>May 2024');
     
-    // Ensure the map does not move
-    map.dragging.disable();
-    map.scrollWheelZoom.disable();
-    map.doubleClickZoom.disable();
-    map.boxZoom.disable();
-    map.keyboard.disable();
-    map.touchZoom.disable();
-
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
 
@@ -44,5 +22,30 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelector("#contact form").reset();
+
+     // Initialize the map
+    var map = L.map('map').setView([47.5, -120.5], 7); 
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+    }).addTo(map);
+
+    
+    var orangeIcon = new L.Icon({
+        iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-orange.png',
+        shadowUrl: 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+        iconSize: [38, 95],
+        shadowSize: [50, 64],
+        iconAnchor: [22, 94],
+        shadowAnchor: [4, 62],
+        popupAnchor: [-3, -76]
+    });
+
+    var pierceMarker = L.marker([47.1717, -122.5185], { icon: orangeIcon }).addTo(map)
+        .bindPopup('<div><img src="piercecollegelogo.png" alt="Pierce College Logo" style="width:50px;height:50px;"><br><b>Pierce College Fort Steilacoom, Lakewood, WA</b><br>Associate of Arts (AA) in Pre-Nursing<br>June 2020</div>');
+
+    var wsuMarker = L.marker([46.7298, -117.1817], { icon: orangeIcon }).addTo(map)
+        .bindPopup('<div><img src="Washington_State_Cougars_logo.png" alt="Washington State University Logo" style="width:50px;height:50px;"><br><b>Washington State University, Pullman, WA</b><br>Bachelor of Science (B.S.) in Data Analytics, Minor in Business<br>May 2024</div>');
+
 });
 
