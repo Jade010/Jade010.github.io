@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         maxZoom: 18,
     }).addTo(map);
 
-    // Create popup contents
     var pierceContent = '<div style="display: flex; align-items: center;"><img src="piercecollegelogo.png" alt="Pierce College Logo" style="width:50px;height:50px;margin-right:10px;"><div><b>Pierce College Fort Steilacoom, Lakewood, WA</b><br>Associate of Arts (AA) in Pre-Nursing<br>June 2020</div></div>';
     var wsuContent = '<div style="display: flex; align-items: center;"><img src="Washington_State_Cougars_logo.png" alt="Washington State University Logo" style="width:50px;height:50px;margin-right:10px;"><div><b>Washington State University, Pullman, WA</b><br>Bachelor of Science (B.S.) in Data Analytics, Minor in Business<br>May 2024</div></div>';
 
@@ -44,5 +43,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
     map.addLayer(piercePopup);
     map.addLayer(wsuPopup);
+
+
+    const form = document.getElementById('contact-form');
+    const thankYouPopup = document.getElementById('thank-you-popup');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        // Send form data using Formspree
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                form.reset(); 
+                showThankYouPopup(); 
+            } else {
+                alert('There was an issue with your submission. Please try again.');
+            }
+        }).catch(error => {
+            alert('There was an issue with your submission. Please try again.');
+        });
+    });
+
+    function showThankYouPopup() {
+        thankYouPopup.style.display = 'flex';
+        thankYouPopup.addEventListener('click', function() {
+            thankYouPopup.style.display = 'none';
+        });
+    }
 });
 
