@@ -22,3 +22,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// Include Leaflet.js library for map
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<script>
+// Initialize the map
+var map = L.map('map').setView([46.7298, -117.1817], 6);
+
+// Set up the OSM layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+}).addTo(map);
+
+// Add markers for educational institutions
+var wsuMarker = L.marker([46.7298, -117.1817]).addTo(map)
+    .bindPopup('<b>Washington State University</b><br>Bachelor of Science in Data Analytics, Minor in Business<br>May 2024');
+
+var pierceMarker = L.marker([47.1683, -122.5078]).addTo(map)
+    .bindPopup('<b>Pierce College Fort Steilacoom</b><br>Associate of Arts in Pre-Nursing<br>June 2020');
+</script>
+
