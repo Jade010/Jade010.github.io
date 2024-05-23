@@ -5,14 +5,16 @@ body, html {
     scroll-behavior: smooth;
     color: #47280B; /* DEFAULT TEXT COLOR (DARK/REDDISH BROWN) */
     background-color: #FDFBF9; /* DEFAULT BACKGROUND COLOR (LIGHT BEIGE) */
-    margin: 80;
+    margin: 0;
     padding: 0;
     display:flex;
     flex-direction:column;
+    overflow-x: hidden; /* NO HORIZONTAL SCROLLING */
 }
 
 .main-content {
     flex: 1 0 auto; 
+    width: 100%;
 }
 
 
