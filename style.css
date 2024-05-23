@@ -464,6 +464,9 @@ footer {
     padding: 20px;
     background-color: #FDFBF9;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 #social-container {
