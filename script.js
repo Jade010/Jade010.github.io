@@ -1,5 +1,27 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector("#contact form").reset();
+     // Initialize the map
+    var map = L.map('map').setView([47.5, -120.5], 7); // Centered on Washington state
+
+    // Set up the OSM layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+    }).addTo(map);
+
+    // Add markers for educational institutions
+    var pierceMarker = L.marker([47.1717, -122.5185], { color: 'red' }).addTo(map)
+        .bindPopup('<b>Pierce College Fort Steilacoom, Lakewood, WA</b><br>Associate of Arts (AA) in Pre-Nursing<br>June 2020');
+
+    var wsuMarker = L.marker([46.7298, -117.1817], { color: 'red' }).addTo(map)
+        .bindPopup('<b>Washington State University, Pullman, WA</b><br>Bachelor of Science (B.S.) in Data Analytics, Minor in Business<br>May 2024');
+    
+    // Ensure the map does not move
+    map.dragging.disable();
+    map.scrollWheelZoom.disable();
+    map.doubleClickZoom.disable();
+    map.boxZoom.disable();
+    map.keyboard.disable();
+    map.touchZoom.disable();
+
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
 
@@ -20,27 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    document.querySelector("#contact form").reset();
 });
-
-
-// Include Leaflet.js library for map
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
-<script>
-// Initialize the map
-var map = L.map('map').setView([46.7298, -117.1817], 6);
-
-// Set up the OSM layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-}).addTo(map);
-
-// Add markers for educational institutions
-var wsuMarker = L.marker([46.7298, -117.1817]).addTo(map)
-    .bindPopup('<b>Washington State University</b><br>Bachelor of Science in Data Analytics, Minor in Business<br>May 2024');
-
-var pierceMarker = L.marker([47.1683, -122.5078]).addTo(map)
-    .bindPopup('<b>Pierce College Fort Steilacoom</b><br>Associate of Arts in Pre-Nursing<br>June 2020');
-</script>
 
