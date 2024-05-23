@@ -16,6 +16,7 @@ body, html {
 }
 
 
+
 /**Navigation Bar**/
 #navbar {
     position: fixed;
@@ -84,6 +85,8 @@ section {
     margin-top: 70px;
 }
 
+
+
 /**Home Page**/
 #home {
     padding-top: 70px;
@@ -99,7 +102,6 @@ section {
     align-items: center;
     width: 100%;
 }
-
 
 .text-container {
     text-align: center; 
@@ -159,14 +161,11 @@ section {
     flex-direction: column;
 }
 
-
 .about-text {
     flex: 1; 
     text-align: left; 
     margin-bottom: 20px 
 }
-
-
 
 h1 {
     font-size: 48px;
@@ -198,8 +197,8 @@ h2 {
     align-items: center;
     text-align: center;
     background-color: #FDFBF9;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 10px; 
+    border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -208,6 +207,7 @@ h2 {
     height: 50px;
     margin-bottom: 5px;
 }
+
 
 
 /**Education Page**/
@@ -248,9 +248,7 @@ h2 {
 .education-container div {
     text-align: left; 
     width: 100%; 
-    
 }
-
 
 .coursework {
     width: 100%; 
@@ -275,7 +273,6 @@ h2 {
     color: #47280B; 
 }
 
-
 ul {
     list-style-type: none; 
     padding-top: 0;
@@ -288,15 +285,15 @@ li {
 }
 
 li:before {
-    content: '•'; /* Custom bullet point */
-    color: #333; /* Bullet color */
+    content: '•'; 
+    color: #333; 
     position: absolute;
     left: 0;
 }
 
 
-/**Project Page**/
 
+/**Project Page**/
 #projects {
     background-color: #FFDAA5;
 }
@@ -389,6 +386,7 @@ li:before {
     margin-top: 10px;
     font-size: 0.8em;
 }
+
 
 
 /* Contact Section */
