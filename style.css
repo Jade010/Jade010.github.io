@@ -233,8 +233,10 @@ h2 {
 
 
 #map {
-    height: 600px;
-    width: 80%;
+    height: 500px;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
 }
 
 .map-container {
@@ -242,6 +244,9 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .leaflet-popup-content-wrapper {
