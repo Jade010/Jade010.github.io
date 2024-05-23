@@ -226,6 +226,33 @@ h2 {
     width: 80%;
 }
 
+.map-container {
+    background-color: #FFDAA5;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0;
+}
+
+.leaflet-popup-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.leaflet-popup-content img {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.leaflet-popup-content div {
+    text-align: left;
+}
+
 
 /**Project Page**/
 #projects {
