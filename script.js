@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Making sure the page navigates to the home section on load
+    if (!window.location.hash) {
+        window.location.hash = '#home';
+    } else {
+        // In case there is a hash force reload
+        window.location.hash = ''; 
+        window.location.hash = '#home';
+    }
 
     // Getting all filter buttons and project cards
     const buttons = document.querySelectorAll('.filter-button');
