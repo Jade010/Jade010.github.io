@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const form = document.getElementById('contact-form');
     const thankYouPopup = document.getElementById('thank-you-popup');
+    const closeButton = document.querySelector('.close-popup');
 
     form.addEventListener('submit', function(event) {
         event.preventDefault(); 
 
-        // Send form data using Formspree
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
@@ -72,9 +72,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showThankYouPopup() {
         thankYouPopup.style.display = 'flex';
-        thankYouPopup.addEventListener('click', function() {
-            thankYouPopup.style.display = 'none';
-        });
+        document.body.classList.add('no-scroll'); // Prevent scrolling
     }
+
+    closeButton.addEventListener('click', function() {
+        thankYouPopup.style.display = 'none';
+        document.body.classList.remove('no-scroll'); // Re-enable scrolling
+    });
+
+   
 });
 
