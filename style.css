@@ -33,16 +33,16 @@ body, html {
 
 /**Navigation Bar**/
 #navbar {
-    position: fixed;
+    position: fixed; /* NEEDS TO STAY AT THE TOP */
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: #FDFBF9;
-    box-shadow: 0 2px 5px #FF5D11;
-    padding: 10px 20px;
-    z-index: 1000;
+    background-color: #FDFBF9; /* LIGHT BEIGE */
+    box-shadow: 0 2px 5px #FF5D11; /* ORANGE SHADOW */
+    padding: 10px 10px;
+    z-index: 1000; /* NEEDS TO BE HIGHEST TO STAY ON TOP OF EVERYTHING */
 }
 
 .nav-links {
@@ -334,6 +334,8 @@ h2 {
     padding: 20px; 
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
 }
 
 .project-info {
@@ -347,6 +349,8 @@ h2 {
     padding-left: 30px;
     text-align: left;
     overflow-y: auto;
+    flex: 1;
+    margin-bottom: 20px; /* MAKING SPACE FOR TAGS */
 }
 
 .project-info h2 {
