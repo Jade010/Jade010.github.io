@@ -17,12 +17,12 @@ body, html {
     width: 100%; /* MAIN CONTENT NEEDS TO TAKE UP FULL WIDTH */
 }
 
-/* Making sure all child elements respect the container's width */
+/* THE CHILD ELEMENTS MUST RESPECT THE CONTAINERS WIDTH */
 * {
     box-sizing: border-box;
 }
 
-/* Making sure elements don't overflow */
+/* MAKING SURE ELEMENTS AREN'T OVERFLOWING */
 .container {
     max-width: 100%; 
     overflow-x: hidden; 
@@ -355,12 +355,16 @@ h2 {
 
 
 .tags {
-    background-color: #FFDAA5;
+    background-color: #FFDAA5; /* ORANGE CREAM COLOR */
     color: #47280B;
     padding: 5px;
     border-radius: 5px; 
-    margin-top: 10px;
     font-size: 0.8em;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
 }
 
 
