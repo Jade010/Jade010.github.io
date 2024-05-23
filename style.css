@@ -14,7 +14,12 @@ body, html {
 
 .main-content {
     flex: 1 0 auto; 
-    width: 100%;
+    width: 100%; /* MAIN CONTENT NEEDS TO TAKE UP FULL WIDTH */
+}
+
+* Ensure all child elements respect the container's width */
+* {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 
