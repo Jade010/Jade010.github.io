@@ -231,14 +231,6 @@ h2 {
     margin-bottom: 30px; 
 }
 
-
-#map {
-    height: 500px;
-    width: 90%;
-    max-width: 1200px;
-    border-radius: 8px;
-}
-
 .map-container {
     background-color: #FFDAA5;
     padding: 20px;
@@ -247,7 +239,19 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 600px;
+    width: 100%;
+    
 }
+
+#map {
+    height: 500px;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
+
 
 .leaflet-popup-content-wrapper {
     padding: 0;
