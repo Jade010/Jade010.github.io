@@ -353,6 +353,11 @@ li:before {
     overflow-y: auto;
 }
 
+.project-info h2 {
+    text-align: center;
+}
+
+
 .tags {
     background-color: #FFDAA5;
     color: #47280B;
