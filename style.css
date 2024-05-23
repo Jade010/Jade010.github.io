@@ -371,6 +371,12 @@ h2 {
     z-index: 1;
 }
 
+/* TEXT NEEDS TO SCROLL BEHIND TAGS */
+.project-card::before {
+    content: '';
+    display: block;
+    height: 20px; /* SPACE BETWEEN TEXT AND TAGS */
+}
 
 
 /* Contact Section */
