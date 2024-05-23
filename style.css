@@ -17,6 +17,17 @@ body, html {
     width: 100%; /* MAIN CONTENT NEEDS TO TAKE UP FULL WIDTH */
 }
 
+/* Making sure all child elements respect the container's width */
+* {
+    box-sizing: border-box;
+}
+
+/* elements don't overflow */
+.container {
+    max-width: 100%; /* Ensure any container does not exceed 100% width */
+    overflow-x: hidden; /* Prevent overflow within containers */
+}
+
 
 
 
