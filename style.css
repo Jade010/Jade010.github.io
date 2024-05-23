@@ -329,7 +329,6 @@ li:before {
     color: #47280B;
     text-decoration: none;
     transition: transform 0.3s ease;
-    overflow-y: auto; 
     display: flex;
     width: 300px;
     flex-direction: column; 
