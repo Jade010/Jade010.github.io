@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector("#contact form").reset();
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
 
