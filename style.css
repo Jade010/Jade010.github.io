@@ -221,84 +221,10 @@ h2 {
 
 
 /**Education Page**/
-#education {
-    text-align: left;
-    background-color: #FDFBF9;
-    padding: 50px 20px;
-}
-
-#education .subtitle {
-    margin-bottom: 30px; 
-}
-
-
-.education-info {
-    display: flex;
-    align-items: center; 
-}
-
-.timeline {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    position: relative;
-    padding: 20px 0;
-    list-style: none;
-}
-
-.timeline-year {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10px;
-    font-weight: bold;
-    color: #FF5D11;
-}
-
-.timeline-event {
-    position: relative;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.timeline-event.left {
-    justify-content: flex-start;
-    text-align: center;
-}
-
-.timeline-event.right {
-    justify-content: flex-end;
-    text-align: center;
-}
-
-.timeline-event:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    height: 100%;
-    width: 2px;
-    background-color: #FF5D11;
-    transform: translateX(-50%);
-}
-
-.timeline-content {
-    padding: 20px;
-    background-color: #FDFBF9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+#map {
+    height: 600px;
     width: 100%;
-    text-align: center;
 }
-
-.university-logo {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
 
 
 /**Project Page**/
