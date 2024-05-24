@@ -34,16 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Resetting the contact form when reloading page
     document.querySelector("#contact form").reset();
 
-    // Starting map centered on Washington State
-    var map = L.map('map', {
-        center: [47.5, -120.5],
-        zoom: 7,
-        maxBounds: [
-            [45.0, -125.0], // Southwest coordinates
-            [50.0, -115.0]  // Northeast coordinates
-        ],
-        maxBoundsViscosity: 1.0
-    });
+    // Initialize map centered on Washington State
+    var map = L.map('map').setView([47.5, -120.5], 7);
 
     // Setting up the OSM layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -54,17 +46,27 @@ document.addEventListener('DOMContentLoaded', function() {
     var pierceContent = '<div style="display: flex; align-items: center;"><img src="piercecollegelogo.png" alt="Pierce College Logo" style="width:50px;height:50px;margin-right:10px;"><div><b>Pierce College Fort Steilacoom, Lakewood, WA</b><br>Associate of Arts (AA) in Pre-Nursing<br>June 2020</div></div>';
     var wsuContent = '<div style="display: flex; align-items: center;"><img src="Washington_State_Cougars_logo.png" alt="Washington State University Logo" style="width:50px;height:50px;margin-right:10px;"><div><b>Washington State University, Pullman, WA</b><br>Bachelor of Science (BS) in Data Analytics, Minor in Business<br>May 2024</div></div>';
 
-    // Adding the popups to the map
-    var piercePopup = L.popup({ closeButton: false })
+    // Add popups to the map with closeButton disabled
+    var piercePopup = L.popup({ closeButton: false, autoClose: false, closeOnClick: false })
         .setLatLng([47.1717, -122.5185])
         .setContent(pierceContent);
 
-    var wsuPopup = L.popup({ closeButton: false })
+    var wsuPopup = L.popup({ closeButton: false, autoClose: false, closeOnClick: false })
         .setLatLng([46.7298, -117.1817])
         .setContent(wsuContent);
 
     map.addLayer(piercePopup);
     map.addLayer(wsuPopup);
+
+    // Limit the scrollable area to Washington State
+    var bounds = L.latLngBounds([
+        [45.5, -124.5], // Southwest corner
+        [49.0, -116.5]  // Northeast corner
+    ]);
+    map.setMaxBounds(bounds);
+    map.on('drag', function() {
+        map.panInsideBounds(bounds, { animate: false });
+    });
 
 
     // Contact form submission handling
