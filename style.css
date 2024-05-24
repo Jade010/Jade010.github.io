@@ -141,7 +141,7 @@ section {
     width: 100%;
     max-width: 650px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
@@ -165,12 +165,6 @@ section {
     flex: 1; 
     text-align: left; 
     margin-bottom: 20px 
-}
-
-h1 {
-    font-size: 48px;
-    margin-top: 20px;
-    margin-bottom: 0;
 }
 
 #home h1, #profile-icon {
