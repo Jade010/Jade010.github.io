@@ -34,8 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Resetting the contact form when reloading page
     document.querySelector("#contact form").reset();
 
-    // Initialize map centered on Washington State
-    var map = L.map('map').setView([47.5, -120.5], 7);
+    // Starting map centered on Washington State
+    var map = L.map('map', {
+        center: [47.5, -120.5],
+        zoom: 7,
+        maxBounds: [
+            [45.0, -125.0], // Southwest coordinates
+            [50.0, -115.0]  // Northeast coordinates
+        ],
+        maxBoundsViscosity: 1.0
+    });
 
     // Setting up the OSM layer
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -57,16 +65,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     map.addLayer(piercePopup);
     map.addLayer(wsuPopup);
-
-    // Limit the scrollable area to Washington State
-    var bounds = L.latLngBounds([
-        [45.0, -125.0], // Southwest corner
-        [50.0, -115.0]  // Northeast corner
-    ]);
-    map.setMaxBounds(bounds);
-    map.on('drag', function() {
-        map.panInsideBounds(bounds, { animate: false });
-    });
 
     // Contact form submission handling
     const form = document.getElementById('contact-form');
