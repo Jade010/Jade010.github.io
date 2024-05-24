@@ -99,13 +99,17 @@ section {
 }
 
 
-/**Home Page**/
+/** HOME PAGE **/
 #home {
     background-color: #FDFBF9; /* LIGHT BEIGE */
     padding: 60px 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+h1 {
+    font-size: 48px;
 }
 
 .home-content {
