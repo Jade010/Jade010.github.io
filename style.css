@@ -171,11 +171,6 @@ h1 {
     margin-bottom: 20px 
 }
 
-#home h1, #profile-icon {
-    transition: all 0.3s ease;
-    transform: translateY(0); 
-}
-
 h2 {
     font-size: 32px;
     margin-bottom: 20px;
