@@ -123,6 +123,7 @@ section {
 
 .text-background {
     background-color: #FFDAA5; 
+    padding: 10px;
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
@@ -132,32 +133,22 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
     max-width: 50%;
 }
 
 #profile-icon {
-    box-shadow: 3px 3px 6px #47280B;
     width: 100%;
     max-width: 650px;
     height: auto;
-    border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-    .text-container, .picture-box {
-        flex: 100%; 
-    }
-
-    #profile-icon {
-        width: 80%; 
-        margin: 0 auto; 
-    }
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 
 
-/**About Me Page**/
+
+/** ABOUT ME **/
 #about {
     background-color: #FFDAA5;
 }
