@@ -169,7 +169,8 @@ h1 {
 .about-text {
     flex: 1; 
     text-align: left; 
-    margin-bottom: 20px 
+    margin-bottom: 20px;
+    margin-top: 0;
 }
 
 h2 {
