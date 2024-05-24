@@ -253,13 +253,13 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 700px;
     width: 90%;
     
 }
 
 #map {
-    height: 580px;
+    height: 600px;
     width: 100%;
     max-width: 1900px;
     border-radius: 8px;
