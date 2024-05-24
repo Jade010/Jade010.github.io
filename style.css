@@ -161,7 +161,6 @@ h1 {
     width: 100%;
     max-width: 1200px; 
     margin: 0 auto;
-    padding: 20px;
     flex-direction: column;
 }
 
@@ -209,13 +208,8 @@ h2 {
 
 /**Education Page**/
 #education {
-    text-align: left;
     background-color: #FDFBF9;
     padding: 50px 20px;
-}
-
-#education .subtitle {
-    margin-bottom: 20px; 
 }
 
 .map-container {
