@@ -95,14 +95,13 @@ section {
 
 .subtitle {
     font-size: 45px; 
-    margin: 20px;
+    margin: 30px;
 }
 
 
 /**Home Page**/
 #home {
-    padding-top: 70px;
-    background-color: #FDFBF9; 
+    background-color: #FDFBF9; /* LIGHT BEIGE */
     padding: 50px 10px;
     display: flex;
     justify-content: space-around;
@@ -111,14 +110,13 @@ section {
 
 .home-content {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
 }
 
 .text-container {
     text-align: center; 
-    justify-content: space-between;
-    align-items: center;
     flex: 1;
     margin: 0;
 }
