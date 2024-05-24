@@ -253,7 +253,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 650px;
+    height: 640px;
     width: 90%;
     
 }
@@ -366,6 +366,14 @@ h2 {
     justify-content: center;
     align-items: center;
     white-space: nowrap;
+}
+
+.tags-container {
+    display: flex;
+    justify-content: flex-start; /* Adjust as needed */
+    gap: 10px; /* Space between tags */
+    margin-top: auto; /* Push tags to the bottom */
+    padding-top: 10px;
 }
 
 /* TEXT NEEDS TO SCROLL BEHIND TAGS */
