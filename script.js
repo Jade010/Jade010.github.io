@@ -8,6 +8,25 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.hash = '#home';
     }
 
+    // Smooth scrolling with offset for navigation links
+    const navbarHeight = document.getElementById('navbar').offsetHeight;
+
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
     // Getting all filter buttons and project cards
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
