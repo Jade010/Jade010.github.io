@@ -1,2 +1,2 @@
 # Jade Aidoghie Portfolio
-Welcome to my personal portfolio hosted with Github Pages! I love development and analytics so I decided to build a website of my own that shows my projects, skills, and contact information. Currently up and running.
+Welcome to my personal portfolio hosted with Github Pages! I enjoy designing interactive and websites and applictions so this is a project I've been working on over time.  My website is currently up and with a few developments to the projects section on the way! To access the website all you need to do is click the link in the about section.
