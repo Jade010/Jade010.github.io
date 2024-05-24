@@ -51,11 +51,11 @@ body, html {
 }
 
 .nav-item {
-    text-decoration: none;
+    text-decoration: none; /* NO NAVIGATION UNDERLINES */
     color: #47280B;
     font-size: 18px;
     padding: 10px;
-    transition: color 0.3s;
+    transition: color 0.3s; /* SMOOTHING TRANSITION */
 }
 
 .nav-download {
@@ -63,15 +63,15 @@ body, html {
     color: #FF5D11;
     font-size: 18px;
     padding: 10px;
-    transition: color 0.3s;
-}
-
-.nav-download:hover {
-    color: #A03B0C;
+    transition: color 0.3s; 
 }
 
 .nav-item:hover {
     color: #FF5D11;
+} 
+
+.nav-download:hover {
+    color: #A03B0C;
 }
 
 section {
