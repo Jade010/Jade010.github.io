@@ -241,7 +241,6 @@ h2 {
 }
 
 
-
 .leaflet-popup-content-wrapper {
     padding: 0;
 }
@@ -366,7 +365,7 @@ h2 {
     align-items: center;
     min-height: 100vh; 
     padding: 20px 20px; 
-    background: url('marina-reich-j6RBncJvbF4-unsplash.jpg') no-repeat center center;
+    background: url('Images/marina-reich-j6RBncJvbF4-unsplash.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
     position: relative;
