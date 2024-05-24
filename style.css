@@ -75,7 +75,7 @@ body, html {
 }
 
 
-
+/** CONTAINER INFORMATION **/
 section {
     padding: 50px 20px 50px;
     min-height: 100vh; /* SECTIONS SHOULD TAKE UP 100% VIEWPORT HEIGHT */
@@ -90,23 +90,13 @@ section {
     text-align: center; 
     width: 100%;
     margin-top: 0; 
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .subtitle {
-    font-size: 48px;
-    margin: 10px;
+    font-size: 45px; 
+    margin: 20px;
 }
-
-#contact .subtitle {
-    margin-bottom: 20px;
-}
-
-#education .subtitle, 
-#contact .subtitle {
-    margin-top: 70px;
-}
-
 
 
 /**Home Page**/
