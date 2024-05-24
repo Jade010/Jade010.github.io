@@ -60,14 +60,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Limit the scrollable area to Washington State
     var bounds = L.latLngBounds([
-        [45.5, -124.5], // Southwest corner
-        [49.0, -116.5]  // Northeast corner
+        [45.0, -125.0], // Southwest corner
+        [50.0, -115.0]  // Northeast corner
     ]);
     map.setMaxBounds(bounds);
     map.on('drag', function() {
         map.panInsideBounds(bounds, { animate: false });
     });
-
 
     // Contact form submission handling
     const form = document.getElementById('contact-form');
