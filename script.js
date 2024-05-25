@@ -105,5 +105,37 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('no-scroll'); // Re-enable scrolling
     });
 
+    // Video Modal Functionality
+    const modal = document.getElementById('video-modal');
+    const videoElement = document.getElementById('project-video');
+    const videoSource = document.getElementById('video-source');
+    const closeVideoButton = document.querySelector('.close-button');
+
+    projects.forEach(project => {
+        project.addEventListener('click', function(event) {
+            event.preventDefault();
+            const videoSrc = project.getAttribute('data-video');
+            videoSource.src = videoSrc;
+            videoElement.load();
+            modal.style.display = 'flex';
+            document.body.classList.add('no-scroll'); // Prevent scrolling
+        });
+    });
+
+    closeVideoButton.addEventListener('click', function() {
+        modal.style.display = 'none';
+        videoElement.pause(); // Pause the video when closing
+        document.body.classList.remove('no-scroll'); // Re-enable scrolling
+    });
+
+    // Close modal when clicking outside the video content
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            videoElement.pause(); // Pause the video when closing
+            document.body.classList.remove('no-scroll'); // Re-enable scrolling
+        }
+    });
+
    
 });
