@@ -323,6 +323,10 @@ h2 {
     margin-bottom: 20px; /* MAKING SPACE FOR TAGS */
 }
 
+.project-info h2 {
+    margin-bottom: 0;
+}
+
 
 .tags {
     background-color: #FFDAA5; /* ORANGE CREAM COLOR */
