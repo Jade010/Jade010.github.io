@@ -267,41 +267,6 @@ h2 {
     background-color: #FFDAA5;
 }
 
-.info-icon-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.info-icon {
-    font-size: 20px;
-    background-color: #FFDAA5;
-    color: #47280B;
-    padding: 5px 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
-}
-
-.info-popup {
-    display: none;
-    background-color: #FF5D11;
-    color: #FDFBF9;
-    padding: 10px;
-    border-radius: 5px;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    z-index: 1;
-    width: 250px;
-}
-
-.info-icon-container:hover .info-popup {
-    display: block;
-}
-
 .button, .filter-button {
     border: 2px solid #FF5D11;
     color: #47280B;
