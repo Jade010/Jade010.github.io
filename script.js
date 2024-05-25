@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoElement = document.getElementById('project-video');
     const videoSource = document.getElementById('video-source');
     const closeVideoButton = document.querySelector('.close-button');
+    const additionalInfo = document.getElementById('additional-info');
 
     projects.forEach(project => {
         project.addEventListener('click', function(event) {
@@ -120,6 +121,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 videoElement.load();
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll'); // Prevent scrolling
+
+                // Check if the project is the Name Generator Application
+                if (project.getAttribute('data-tags').includes('python') && project.querySelector('h2').innerText === 'Name Generator Application') {
+                    additionalInfo.innerHTML = 'To see more information you can view this project in my GitHub repository <a href="https://github.com/Jade010/Python/tree/main/NameGenerator" target="_blank">Link here</a>';
+                } else {
+                    additionalInfo.innerHTML = '';
+                }
             } else {
                 window.location.href = project.getAttribute('href');
             }
