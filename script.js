@@ -115,10 +115,14 @@ document.addEventListener('DOMContentLoaded', function() {
         project.addEventListener('click', function(event) {
             event.preventDefault();
             const videoSrc = project.getAttribute('data-video');
-            videoSource.src = videoSrc;
-            videoElement.load();
-            modal.style.display = 'flex';
-            document.body.classList.add('no-scroll'); // Prevent scrolling
+            if (videoSrc) {
+                videoSource.src = videoSrc;
+                videoElement.load();
+                modal.style.display = 'flex';
+                document.body.classList.add('no-scroll'); // Prevent scrolling
+            } else {
+                window.location.href = project.getAttribute('href');
+            }
         });
     });
 
@@ -136,6 +140,4 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('no-scroll'); // Re-enable scrolling
         }
     });
-
-   
 });
