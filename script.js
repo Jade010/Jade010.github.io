@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
             projects.forEach(project => {
                 // Checking if the project has a tag or if the filter is on all
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.display = 'block'; // Show project
+                    project.style.display = 'flex'; // Show project
                 } else {
                     project.style.display = 'none'; // Hide project
                 }
