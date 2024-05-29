@@ -23,11 +23,15 @@ document.addEventListener('DOMContentLoaded', function() {
             projects.forEach(project => {
                 // Checking if the project has a tag or if the filter is on all
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.display = 'block';
+                    project.style.display = 'block'; // Show project
                 } else {
-                    project.style.display = 'none';
+                    project.style.display = 'none'; // Hide project
                 }
             });
+            // Force reflow to ensure proper alignment
+            document.querySelector('.project-container').style.display = 'none';
+            document.querySelector('.project-container').offsetHeight; // Trigger reflow
+            document.querySelector('.project-container').style.display = 'grid';
         });
     });
 
