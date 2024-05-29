@@ -28,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     project.style.display = 'none'; // Hide project
                 }
             });
-            // Force reflow to ensure proper alignment
-            document.querySelector('.project-container').style.display = 'none';
-            document.querySelector('.project-container').offsetHeight; // Trigger reflow
-            document.querySelector('.project-container').style.display = 'grid';
         });
     });
 
