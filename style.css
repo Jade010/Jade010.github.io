@@ -287,8 +287,8 @@ h2 {
 }
 
 .project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px; 
     padding: 20px;
     justify-content: center;
@@ -301,8 +301,8 @@ h2 {
     transition: transform 0.3s ease;
     display: flex;
     flex-direction: column; 
-    align-items: flex-start; 
-    justify-content: flex-start; 
+    align-items: center; 
+    justify-content: center; 
     height: 300px;
     word-break: break-word;
     padding: 20px; 
