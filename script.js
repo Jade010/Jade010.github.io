@@ -7,32 +7,52 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.hash = ''; 
         window.location.hash = '#home';
     }
-    // Getting all filter buttons and project cards
-    const buttons = document.querySelectorAll('.filter-button');
-    const projects = document.querySelectorAll('.project-card');
-    // Adding the click event listener to the filter buttons
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove active class from all buttons
-            buttons.forEach(btn => btn.classList.remove('active'));
-            // Adding active class to the clicked button
-            this.classList.add('active');
-            const filter = this.getAttribute('data-tag');
-            projects.forEach(project => {
-                // Checking if the project has a tag or if the filter is on all
-                if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.display = 'block'; // Show project
-                } else {
-                    project.style.display = 'none'; // Hide project
-                }
-            });
-            // Force reflow to ensure proper alignment
-            document.querySelector('.project-container').style.display = 'none';
-            document.querySelector('.project-container').offsetHeight; // Trigger reflow
-            document.querySelector('.project-container').style.display = 'grid';
-        });
-    });
 
+        
+    filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("single-project");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            console.log(element.className, arr2[i]);
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("button-section");
+        var btns = btnContainer.getElementsByClassName("filter-button");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            console.log(current);
+          });
+        }
     // Resetting the contact form when reloading page
     document.querySelector("#contact form").reset();
     // Starting map centered on Washington State
