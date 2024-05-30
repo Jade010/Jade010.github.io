@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Getting all filter buttons and project cards
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
-    const projectContainer = document.querySelector('.project-container');
-
     // Adding the click event listener to the filter buttons
     buttons.forEach(button => {
         button.addEventListener('click', function() {
@@ -21,32 +19,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adding active class to the clicked button
             this.classList.add('active');
             const filter = this.getAttribute('data-tag');
-
-            // Hide all projects
             projects.forEach(project => {
-                project.style.display = 'none';
-            });
-
-            // Show filtered projects
-            projects.forEach(project => {
+                // Checking if the project has a tag or if the filter is on all
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.display = 'block';
-                }
-            });
-
-            // Remove all project cards from the container
-            while (projectContainer.firstChild) {
-                projectContainer.removeChild(projectContainer.firstChild);
-            }
-
-            // Add the filtered projects back to the container
-            projects.forEach(project => {
-                if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    projectContainer.appendChild(project);
+                    project.style.visibility = 'visible';
+                } else {
+                    project.style.visibility = 'hidden';
                 }
             });
         });
-    });
 
     // Resetting the contact form when reloading page
     document.querySelector("#contact form").reset();
