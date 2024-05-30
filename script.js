@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
         
-    filterSelection("all")
+            filterSelection("all")
         function filterSelection(c) {
           var x, i;
-          x = document.getElementsByClassName("single-project");
+          x = document.getElementsByClassName("filterDiv");
           if (c == "all") c = "";
           for (i = 0; i < x.length; i++) {
             w3RemoveClass(x[i], "show");
@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
           arr1 = element.className.split(" ");
           arr2 = name.split(" ");
           for (i = 0; i < arr2.length; i++) {
-            console.log(element.className, arr2[i]);
             if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
           }
         }
@@ -43,16 +42,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("button-section");
-        var btns = btnContainer.getElementsByClassName("filter-button");
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
         for (var i = 0; i < btns.length; i++) {
           btns[i].addEventListener("click", function(){
             var current = document.getElementsByClassName("active");
             current[0].className = current[0].className.replace(" active", "");
             this.className += " active";
-            console.log(current);
           });
         }
+
+
+        
     // Resetting the contact form when reloading page
     document.querySelector("#contact form").reset();
     // Starting map centered on Washington State
