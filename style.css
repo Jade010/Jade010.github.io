@@ -344,8 +344,10 @@ h2 {
 
 
 .tags { 
+    background-color: #FFDAA5;
     color: #47280B;
-    padding: 5px;
+    border-radius: 8px;
+    padding: 50px;
     font-size: 0.8em;
     position: absolute;
     bottom: 10px;
@@ -356,13 +358,13 @@ h2 {
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    border-radius: 8px; 
-    box-shadow: 0 4px 6px #FFDAA5; /* ORANGE CREAM COLOR */
+     
+    font-style: italic;
 }
 
 .tags-container {
     display: flex;
-    justify-content: flex-start; /* Adjust as needed */
+    justify-content: flex-start;
     gap: 10px; /* Space between tags */
     margin-top: auto; /* Push tags to the bottom */
     padding-top: 10px;
