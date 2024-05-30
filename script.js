@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Getting all filter buttons and project cards
     const buttons = document.querySelectorAll('.filter-button');
     const projects = document.querySelectorAll('.project-card');
+    const projectContainer = document.querySelector('.project-container');
 
     // Adding the click event listener to the filter buttons
     buttons.forEach(button => {
@@ -20,10 +21,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Adding active class to the clicked button
             this.classList.add('active');
             const filter = this.getAttribute('data-tag');
+
+            // Clearing the container and re-adding filtered projects
+            projectContainer.innerHTML = ''
+            
             projects.forEach(project => {
                 // Checking if the project has a tag or if the filter is on all
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.display = 'flex'; // Show project
+                    project.style.display = 'block'; // Show project
+                    projectContainer.appendChild(project); // Re-add to container
                 } else {
                     project.style.display = 'none'; // Hide project
                 }
