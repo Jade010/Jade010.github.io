@@ -264,26 +264,41 @@ h2 {
     background-color: #FFDAA5;
 }
 
-.buttons, .filter-button {
+#buttons {
+     justify-content: center;
+     align-items: center;
+}
+
+.filter-button {
     cursor: pointer; 
     border: 2px solid #FF5D11;
     color: #47280B;
     background-color: transparent;
     padding: 10px;
     transition: background-color 0.3s, color 0.3s;
-    justify-content: center;
-	align-items: center;
 }
 
-.buttons:hover, .filter-button:hover {
+.filter-button:hover {
     background-color: #FF5D11;
     color: #FDFBF9;
 }
 
-.buttons.active, .filter-button.active {
+.filter-button.active {
     background-color: #FF5D11;
     color: #FDFBF9;
 }
+
+.single-project {
+	position: relative;
+	height: 350px;
+	width: 350px;
+	margin: 3%;
+	display: none;
+}
+
+.show {
+	display: block;
+  }
 
 .project-container {
     display: grid;
