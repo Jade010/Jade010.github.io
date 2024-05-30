@@ -165,14 +165,7 @@ section {
 
 .about-text {
     flex: 1; 
-    text-align: left; 
-    margin-bottom: 20px;
-    margin-top: 0;
-}
-
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    text-align: left;
 }
 
 .interest-container {
