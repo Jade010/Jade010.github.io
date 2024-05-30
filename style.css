@@ -106,6 +106,10 @@ section {
     align-items: center;
 }
 
+#home h1 {
+     font-size: 48px;
+}
+
 .home-content {
     display: flex;
     justify-content: space-between;
