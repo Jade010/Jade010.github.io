@@ -267,21 +267,23 @@ h2 {
     background-color: #FFDAA5;
 }
 
-.button, .filter-button {
+.buttons, .filter-button {
+    cursor: pointer; 
     border: 2px solid #FF5D11;
     color: #47280B;
     background-color: transparent;
     padding: 10px;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+    justify-content: center;
+	align-items: center;
 }
 
-.button:hover, .filter-button:hover {
+.buttons:hover, .filter-button:hover {
     background-color: #FF5D11;
     color: #FDFBF9;
 }
 
-.button.active, .filter-button.active {
+.buttons.active, .filter-button.active {
     background-color: #FF5D11;
     color: #FDFBF9;
 }
