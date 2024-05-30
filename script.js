@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
         
-            filterSelection("all")
+        filterSelection("all")
         function filterSelection(c) {
           var x, i;
-          x = document.getElementsByClassName("filterDiv");
+          x = document.getElementsByClassName("project-card");
           if (c == "all") c = "";
           for (i = 0; i < x.length; i++) {
             w3RemoveClass(x[i], "show");
@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("myBtnContainer");
-        var btns = btnContainer.getElementsByClassName("btn");
+        var btnContainer = document.getElementById("buttons");
+        var btns = btnContainer.getElementsByClassName("filter-button");
         for (var i = 0; i < btns.length; i++) {
           btns[i].addEventListener("click", function(){
             var current = document.getElementsByClassName("active");
