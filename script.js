@@ -22,16 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             const filter = this.getAttribute('data-tag');
 
-            // Clearing the container and re-adding filtered projects
-            projectContainer.innerHTML = ''
-            
+            // Hide all projects
             projects.forEach(project => {
-                // Checking if the project has a tag or if the filter is on all
+                project.style.display = 'none';
+            });
+
+            // Show filtered projects
+            projects.forEach(project => {
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.display = 'block'; // Show project
-                    projectContainer.appendChild(project); // Re-add to container
-                } else {
-                    project.style.display = 'none'; // Hide project
+                    project.style.display = 'block';
+                }
+            });
+
+            // Remove all project cards from the container
+            while (projectContainer.firstChild) {
+                projectContainer.removeChild(projectContainer.firstChild);
+            }
+
+            // Add the filtered projects back to the container
+            projects.forEach(project => {
+                if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
+                    projectContainer.appendChild(project);
                 }
             });
         });
