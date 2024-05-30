@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
             projects.forEach(project => {
                 // Checking if the project has a tag or if the filter is on all
                 if (filter === 'all' || project.getAttribute('data-tags').includes(filter)) {
-                    project.style.visibility = 'visible';
+                    project.style.display = 'flex';
                 } else {
-                    project.style.visibility = 'hidden';
+                    project.style.display = 'none';
                 }
             });
         });
