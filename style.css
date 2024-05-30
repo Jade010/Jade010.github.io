@@ -106,11 +106,6 @@ section {
     align-items: center;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 0;
-}
-
 .home-content {
     display: flex;
     justify-content: space-between;
