@@ -256,8 +256,9 @@ section {
 }
 
 #buttons {
-     justify-content: center;
-     align-items: center;
+    justify-content: center;
+    align-items: center;
+	margin-bottom: 20;
 }
 
 .project-card {
