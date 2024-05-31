@@ -264,8 +264,6 @@ section {
 	float: left;
     background-color: #FDFBF9;
     color: #47280B;
-	width: 100px;
-	line-height: 100px;
 	text-align: center;
 	margin: 2px;
 	display: none;
@@ -278,6 +276,7 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
 }
+
 
 .project-container {
 	margin-top: 20px;
