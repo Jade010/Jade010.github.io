@@ -202,7 +202,7 @@ section {
 }
 
 
-/**Education Page**/
+/** EDUCATION PAGE **/
 #education {
     background-color: #FDFBF9;
     padding: 50px 20px;
@@ -217,8 +217,7 @@ section {
     justify-content: center;
     align-items: center;
     height: 635px;
-    width: 90%;
-    
+    width: 90%; 
 }
 
 #map {
@@ -250,7 +249,7 @@ section {
 }
 
 
-/**Project Page**/
+/** PROJECT PAGE **/
 #projects {
     background-color: #FFDAA5;
 }
@@ -336,7 +335,7 @@ section {
 }
 
 
-/* Modal Styles */
+/* MODAL STYLES */
 .modal {
     display: none;
     position: fixed;
@@ -387,7 +386,7 @@ section {
 }
 
 
-/* Contact Section */
+/* CONTACT SECTION */
 #contact {
     display: flex; 
     flex-direction: column;
@@ -483,7 +482,7 @@ textarea {
     background-color: #E04E10;
 }
 
-/* Thank You Popup */
+/** THANK YOU POP UP **/
 .thank-you-popup {
     display: none;
     position: fixed;
@@ -523,7 +522,7 @@ body.no-scroll {
 
 
 
-/**Footer**/
+/** FOOTER **/
 footer {
     padding: 20px;
     background-color: #FDFBF9;
