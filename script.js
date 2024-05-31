@@ -38,7 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Filter project cards
     filterSelection("all");
-    
+
+    // Add event listeners to filter buttons
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove 'active' class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add 'active' class to the clicked button
+            this.classList.add('active');
+            // Filter the project cards
+            filterSelection(this.innerText.toLowerCase());
+        });
+    });
+
     const projects = document.querySelectorAll('.project-card');
     projects.forEach(project => {
         project.addEventListener('click', function(event) {
