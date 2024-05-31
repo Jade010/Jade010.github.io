@@ -261,6 +261,7 @@ section {
 }
 
 .project-card {
+	cursor: pointer;
 	float: center;
     background-color: #FDFBF9;
     color: #47280B;
