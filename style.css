@@ -265,6 +265,7 @@ section {
     background-color: #FDFBF9;
     color: #47280B;
 	text-align: center;
+	width: 100px;
 	margin: 2px;
 	display: none;
     text-decoration: none;
