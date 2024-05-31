@@ -262,7 +262,7 @@ section {
 }
 
 .project-card {
-	float: left;
+	float: center;
     background-color: #FDFBF9;
     color: #47280B;
 	text-align: center;
