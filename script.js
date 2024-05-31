@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             w3RemoveClass(x[i], "show");
             if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
         }
-    };
+    }
         
     function w3AddClass(element, name) {
         var i, arr1, arr2;
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         for (i = 0; i < arr2.length; i++) {
             if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
         }
-    };
+    }
         
     function w3RemoveClass(element, name) {
         var i, arr1, arr2;
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         element.className = arr1.join(" ");
-    };
+    }
         
     // Add active class to the current button (highlight it)
     var btnContainer = document.getElementById("buttons");
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             current[0].className = current[0].className.replace(" active", "");
             this.className += " active";
         });
-    };
+    }
 
 
     // Contact form submission handling
