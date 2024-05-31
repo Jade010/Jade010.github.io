@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.hash = '#home';
     }
 
-        
+
+        // Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_filter_elements
         filterSelection("all")
         function filterSelection(c) {
           var x, i;
