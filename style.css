@@ -86,12 +86,27 @@ section {
 }
 
 .subtitle {
-     	font-size: 45px; 
+    font-size: 45px; 
 	margin-top: 30px;
-	margin-bottom: 20px;
 	position: relative;
 	text-align: center; 
 	width: 100%;
+}
+
+#about .subtitle {
+	margin-bottom: 0;
+}
+
+#education .subtitle {
+	margin-bottom: 20px;
+}
+
+#projects .subtitle {
+	margin-bottom: 20px;
+}
+
+#contact .subtitle {
+	margin-bottom: 20px;
 }
 
 
