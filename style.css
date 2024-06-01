@@ -140,12 +140,12 @@ section {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    max-width: 50%;
+    max-width: 100%;
 }
 
 #profile-icon {
-    width: 80%;
-    max-width: 650px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
