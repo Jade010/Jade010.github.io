@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.hash = '#home';
     }
     
-    // Leaflet map
+    // Leaflet map setup (same as your code)
     var map = L.map('map', {
         center: [47.5, -120.5],
         zoom: 7,
@@ -73,6 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Make sure these variables are correctly selected
+    const modal = document.getElementById('video-modal');
+    const videoElement = document.getElementById('project-video');
+    const videoSource = document.getElementById('video-source');
+    const closeVideoButton = document.querySelector('.close-button');
+    const additionalInfo = document.getElementById('additional-info');
+
     closeVideoButton.addEventListener('click', function() {
         modal.style.display = 'none';
         videoElement.pause();
@@ -127,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Reset form on reload
-    document.querySelector("#contact form").reset();
+    document.getElementById('contact-form').reset();
 });
 
 function filterSelection(c) {
