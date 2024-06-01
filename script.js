@@ -93,7 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeButton = document.querySelector('.close-popup');
     
     form.addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Preventing the default form that goes to a different page
+
+        // Sending form info to Formspree
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
@@ -102,8 +104,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }).then(response => {
             if (response.ok) {
-                form.reset();
-                showThankYouPopup();
+                form.reset(); // Clear form when submitted
+                showThankYouPopup(); // Thank you popup screen
             } else {
                 alert('There was an issue with your submission. Please try again.');
             }
@@ -111,15 +113,17 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('There was an issue with your submission. Please try again.');
         });
     });
-    
+
+    // Function for the thank you popup
     function showThankYouPopup() {
         thankYouPopup.style.display = 'flex';
-        document.body.classList.add('no-scroll');
+        document.body.classList.add('no-scroll'); // Prevents scrolling
     }
 
+    // Event listener to close the popup
     closeButton.addEventListener('click', function() {
         thankYouPopup.style.display = 'none';
-        document.body.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll');  // Re-enable scrolling
     });
 
     // Reset form on reload
