@@ -267,7 +267,7 @@ section {
 /** PROJECT PAGE **/
 #projects {
     background-color: #FFDAA5;
-    margin 40px;
+	margin-left: 40px;
 	
 }
 
@@ -299,6 +299,7 @@ section {
 .project-container {
 	margin-top: 20px;
 	overflow: hidden;
+	margin-left: 40px;
 }
 
 .show {
