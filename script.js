@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         project.addEventListener('click', function(event) {
             event.preventDefault();
             const videoSrc = project.getAttribute('data-video');
+            const repoLink = project.getAttribute('data-repo');
             const projectName = project.querySelector('h2').innerText;
             if (videoSrc) {
                 videoSource.src = videoSrc;
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
-                additionalInfo.innerHTML = `<p>No video available for this project.</p><p>Check the project repository <a href="https://github.com/Jade010" target="_blank">here</a>.</p>`;
+                additionalInfo.innerHTML = `<p>You can view this project <a href="${repoLink}" target="_blank">here</a>.</p>`;
             }
         });
     });
