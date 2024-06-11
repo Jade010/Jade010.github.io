@@ -57,12 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
         project.addEventListener('click', function(event) {
             event.preventDefault();
             const videoSrc = project.getAttribute('data-video');
+            const projectName = project.querySelector('h2').innerText;
             if (videoSrc) {
                 videoSource.src = videoSrc;
                 videoElement.load();
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
-                if (project.getAttribute('data-tags').includes('python') && project.querySelector('h2').innerText === 'Name Generator Application') {
+                if (projectName === 'Name Generator Application') {
                     additionalInfo.innerHTML = 'To see more information you can view this project in my GitHub repository <a href="https://github.com/Jade010/Python/tree/main/NameGenerator" target="_blank">Link here</a>';
                 } else {
                     additionalInfo.innerHTML = '';
@@ -70,24 +71,19 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
-                additionalInfo.innerHTML = '<p>No video available for this project.</p>';
+                additionalInfo.innerHTML = `<p>No video available for this project.</p><p>Check the project repository <a href="https://github.com/Jade010" target="_blank">here</a>.</p>`;
             }
         });
     });
-
-    // Make sure these variables are correctly selected
-    const modal = document.getElementById('video-modal');
-    const videoElement = document.getElementById('project-video');
-    const videoSource = document.getElementById('video-source');
-    const closeVideoButton = document.querySelector('.close-button');
-    const additionalInfo = document.getElementById('additional-info');
-
+    
+    // Modal close button event
     closeVideoButton.addEventListener('click', function() {
         modal.style.display = 'none';
         videoElement.pause();
         document.body.classList.remove('no-scroll');
     });
 
+    // Close modal when clicking outside of it
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
