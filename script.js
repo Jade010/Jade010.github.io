@@ -68,7 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     additionalInfo.innerHTML = '';
                 }
             } else {
-                window.location.href = project.getAttribute('href');
+                modal.style.display = 'flex';
+                document.body.classList.add('no-scroll');
+                additionalInfo.innerHTML = '<p>No video available for this project.</p>';
             }
         });
     });
