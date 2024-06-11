@@ -267,8 +267,6 @@ section {
 /** PROJECT PAGE **/
 #projects {
     background-color: #FFDAA5;
-	margin-left: 40px;
-	
 }
 
 #buttons {
@@ -284,6 +282,7 @@ section {
 	text-align: center;
 	width: 300px;
 	height: 300px;
+	margin: 50px;
 	margin-left: 50px;
 	display: none;
     text-decoration: none;
