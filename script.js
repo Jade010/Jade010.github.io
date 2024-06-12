@@ -59,20 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const videoSrc = project.getAttribute('data-video');
             const repoLink = project.getAttribute('data-repo');
             const projectName = project.querySelector('h2').innerText;
+
             if (videoSrc) {
                 videoSource.src = videoSrc;
                 videoElement.load();
+                additionalInfo.innerHTML = '';
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
-                if (projectName === 'Name Generator Application') {
-                    additionalInfo.innerHTML = 'To see more information you can view this project in my GitHub repository <a href="https://github.com/Jade010/Python/tree/main/NameGenerator" target="_blank">Link here</a>';
-                } else {
-                    additionalInfo.innerHTML = '';
-                }
             } else {
+                videoSource.src = ''; // Clear the video source if no video
+                videoElement.pause(); // Pause any playing video
+                additionalInfo.innerHTML = `<p>You can view this project <a href="${repoLink}" target="_blank">here</a>.</p>`;
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
-                additionalInfo.innerHTML = `<p>You can view this project <a href="${repoLink}" target="_blank">here</a>.</p>`;
             }
         });
     });
