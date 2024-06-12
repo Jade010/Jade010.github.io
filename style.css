@@ -282,8 +282,8 @@ section {
 	text-align: center;
 	width: 300px;
 	height: 300px;
-	margin: 10px;
-	margin-left: 40px;
+	margin-top: 20px;
+	margin-left: 60px;
 	display: none;
     text-decoration: none;
     transition: transform 0.3s ease;
