@@ -283,6 +283,7 @@ section {
 	width: 300px;
 	height: 300px;
 	margin: 10px;
+	margin-left: 40px;
 	display: none;
     text-decoration: none;
     transition: transform 0.3s ease;
@@ -304,7 +305,6 @@ section {
 .project-container {
 	margin-top: 20px;
 	overflow: hidden;
-	margin-left: 100px;
 }
 
 .show {
