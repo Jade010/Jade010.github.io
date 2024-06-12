@@ -76,6 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Make sure these variables are correctly selected
+    const modal = document.getElementById('video-modal');
+    const videoElement = document.getElementById('project-video');
+    const videoSource = document.getElementById('video-source');
+    const closeVideoButton = document.querySelector('.close-button');
+    const additionalInfo = document.getElementById('additional-info');
     
     // Modal close button event
     closeVideoButton.addEventListener('click', function() {
