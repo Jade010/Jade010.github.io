@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 videoSource.src = ''; // Clear the video source if no video
                 videoElement.pause(); // Pause any playing video
+                videoElement.style.display = 'none'; // Hide the video element
                 additionalInfo.innerHTML = `<p>You can view this project <a href="${repoLink}" target="_blank">here</a>.</p>`;
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
@@ -95,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target === modal) {
             modal.style.display = 'none';
             videoElement.pause();
+            videoElement.style.display = 'block';
             document.body.classList.remove('no-scroll');
         }
     });
