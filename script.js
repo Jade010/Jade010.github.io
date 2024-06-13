@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (videoSrc) {
                 videoSource.src = videoSrc;
                 videoElement.load();
+                videoElement.style.display = 'block'; // Ensure the video element is visible
                 additionalInfo.innerHTML = '';
                 modal.style.display = 'flex';
                 document.body.classList.add('no-scroll');
@@ -88,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     closeVideoButton.addEventListener('click', function() {
         modal.style.display = 'none';
         videoElement.pause();
+        videoElement.style.display = 'block';
         document.body.classList.remove('no-scroll');
     });
 
@@ -96,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target === modal) {
             modal.style.display = 'none';
             videoElement.pause();
-            videoElement.style.display = 'block';
             document.body.classList.remove('no-scroll');
         }
     });
