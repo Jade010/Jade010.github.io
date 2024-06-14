@@ -58,38 +58,33 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             const videoSrc = project.getAttribute('data-video');
             const repoLink = project.getAttribute('data-repo');
-            const projectName = project.querySelector('h2').innerText;
+            const projectInfo = project.getAttribute('data-info');
+            const modalBody = document.getElementById('modal-body');
 
+            modalBody.innerHTML = ''; // Clear previous content
             if (videoSrc) {
-                videoSource.src = videoSrc;
-                videoElement.load();
-                videoElement.style.display = 'block'; // Ensure the video element is visible
-                additionalInfo.innerHTML = '';
-                modal.style.display = 'flex';
-                document.body.classList.add('no-scroll');
-            } else {
-                videoSource.src = ''; // Clear the video source if no video
-                videoElement.pause(); // Pause any playing video
-                videoElement.style.display = 'none'; // Hide the video element
-                additionalInfo.innerHTML = `<p>You can view this project <a href="${repoLink}" target="_blank">here</a>.</p>`;
-                modal.style.display = 'flex';
-                document.body.classList.add('no-scroll');
+                const videoElement = document.createElement('video');
+                videoElement.controls = true;
+                videoElement.src = videoSrc;
+                videoElement.style.width = '100%';
+                modalBody.appendChild(videoElement);
             }
+            const infoElement = document.createElement('div');
+            infoElement.innerHTML = projectInfo;
+            modalBody.appendChild(infoElement);
+            
+            modal.style.display = 'flex';
+            document.body.classList.add('no-scroll');
         });
     });
 
     // Make sure these variables are correctly selected
-    const modal = document.getElementById('video-modal');
-    const videoElement = document.getElementById('project-video');
-    const videoSource = document.getElementById('video-source');
+    const modal = document.getElementById('project-modal');
     const closeVideoButton = document.querySelector('.close-button');
-    const additionalInfo = document.getElementById('additional-info');
     
     // Modal close button event
     closeVideoButton.addEventListener('click', function() {
         modal.style.display = 'none';
-        videoElement.pause();
-        videoElement.style.display = 'block';
         document.body.classList.remove('no-scroll');
     });
 
@@ -97,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             modal.style.display = 'none';
-            videoElement.pause();
             document.body.classList.remove('no-scroll');
         }
     });
