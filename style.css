@@ -355,6 +355,7 @@ section {
     justify-content: center;
     align-items: center;
     font-style: italic;
+	overflow-y: auto;
 }
 
 
