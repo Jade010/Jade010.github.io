@@ -301,7 +301,6 @@ section {
 	
 }
 
-
 .project-container {
 	margin-top: 20px;
 	overflow: hidden;
@@ -388,6 +387,19 @@ section {
     align-items: center;
     justify-content: center;
 	overflow-y: auto;
+}
+
+/* Project Container Links */
+#project-container a {
+    color: #FF5D11;
+    text-decoration: none;
+	color: #FF5D11;
+    transition: color 0.3s; 
+}
+
+#project-container a:hover {
+    text-decoration: underline;
+	color: #A03B0C;
 }
 
 .close-button {
