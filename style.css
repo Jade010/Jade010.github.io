@@ -390,14 +390,14 @@ section {
 }
 
 /* Project Container Links */
-#data-info a {
+[data-info] a {
     color: #FF5D11;
     text-decoration: none;
 	color: #FF5D11;
     transition: color 0.3s; 
 }
 
-#data-info a:hover {
+[data-info] a:hover {
     text-decoration: underline;
 	color: #A03B0C;
 }
