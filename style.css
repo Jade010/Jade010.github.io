@@ -424,6 +424,44 @@ section {
     max-height: 60vh;
 }
 
+  #data-story {
+        background-color: #FFDAA5;
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .story-container {
+        background: #FDFBF9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: auto;
+    }
+    input {
+        width: 80%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+    }
+    button {
+        background-color: #FF5D11;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    button:hover {
+        background-color: #E04E10;
+    }
+    #story-output {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #47280B;
+    }
+
 /* CONTACT SECTION */
 #contact {
     display: flex; 
@@ -465,56 +503,6 @@ section {
     margin-top: 20px; 
     text-align: center; 
 }
-
- /* 8-bit Retro Theme */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-    
-#fortune-teller {
-    background-color: #000;
-    color: #00FF00;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    padding: 50px 20px;
-}
-    
-.fortune-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-    
-.fortune-screen {
-    background-color: #222;
-    border: 4px solid #00FF00;
-    padding: 20px;
-    width: 80%;
-    max-width: 600px;
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    text-shadow: 2px 2px 2px #00FF00;
-}
-    
-#fortune-button {
-    margin-top: 20px;
-    background-color: #00FF00;
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'Press Start 2P', cursive;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 4px;
-}
-    
-#fortune-button:hover {
-	background-color: ##EC967D;
-}
-
 
 /** THANK YOU POP UP **/
 .thank-you-popup {
