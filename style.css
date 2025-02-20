@@ -420,63 +420,28 @@ section {
     max-height: 60vh;
 }
 
-/* CONTACT SECTION */
-#story {
-	display: flex;
+/* Free Project Ideas Section */
+#project-ideas {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px 20px;
+    padding: 20px;
     background: url('Images/marina-reich-j6RBncJvbF4-unsplash.jpg') no-repeat center center;
-	background-size: cover;
+    background-size: cover;
     text-align: center;
     position: relative;
 }
 
-#contact::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #FDFBF9;
-    opacity: 0.5;
-    z-index: 0; 
-}
-
-.contact-container {
-    position: relative;
-    max-width: 600px;
-    width: 100%;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.project-ideas-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
     border-radius: 8px;
-    background-color: #FDFBF9;
-    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
 }
 
-.contact-subtitle-container {
-    margin-top: 20px; 
-    text-align: center; 
-}
-
-.story-container {
-        background: #FDFBF9;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-        margin: auto;
-}
-input {
-    width: 80%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-}
 button {
     background-color: #FF5D11;
     color: white;
@@ -485,10 +450,12 @@ button {
     cursor: pointer;
     border-radius: 4px;
 }
+
 button:hover {
     background-color: #E04E10;
 }
-#story-output {
+
+#idea-output {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
