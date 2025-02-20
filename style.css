@@ -500,7 +500,7 @@ section {
     
 #fortune-button {
     margin-top: 20px;
-    background-color: #00FF00;
+    background-color: #EC967D;
     color: #000;
     border: none;
     padding: 10px 20px;
@@ -512,7 +512,7 @@ section {
 }
     
 #fortune-button:hover {
-	background-color: ##EC967D;
+	background-color: #EC967D;
 }
 
 
