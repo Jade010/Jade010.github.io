@@ -102,17 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (number && topic) {
             let stories = [
-                `You analyzed <b>${number}</b> datasets and discovered that <b>${topic}</b> increases productivity by <b>${number}%</b>!`,
-                `After intense research on <b>${topic}</b>, your findings reveal that ${number}% of people still have no idea what it actually does!`,
-                `Using ${number} simulations, it has been proven that ${topic} is the leading cause of procrastination... and somehow, also the cure!`,
-                `Groundbreaking study: consuming <b>${topic}</b> exactly <b>${number}</b> times a day makes you immune to bad decisions. Probably.`,
-                `A recent algorithm tested ${number} different ways to use <b>${topic}</b>, and only one of them didn’t result in complete chaos.`,
-                `Scientists accidentally fed ${number} terabytes of memes into an AI, and now it refuses to believe that ${topic} isn't the supreme ruler of the internet.`,
+                `You analyzed <b>${number}</b> datasets and discovered that <b>${topic}</b> increases productivity by <b>${number}%</b>. Scientists are unsure why, but they suspect bribery was involved.`,
+                `After intense research on <b>${topic}</b>, your findings reveal that ${number}% of people still have no idea what it actually does, but they confidently pretend they do.`,
+                `Using ${number} simulations, it has been proven that <b>${topic}</b> is the leading cause of procrastination. Strangely, it’s also the number one recommended solution for it.`,
+                `Groundbreaking study: consuming <b>${topic}</b> exactly <b>${number}</b> times a day makes you immune to bad decisions. Unfortunately, we forgot to define ‘bad.`,
                 `A deep learning model trained on ${number} petabytes of data concluded that ${topic} is, in fact, responsible for 90% of all office distractions.`,
                 `A simulation ran ${number} times found that ${topic} has an 80% chance of starting a pointless internet argument, every single time.`,
                 `A team of experts calculated that if ${topic} was mentioned ${number} more times, reality itself might start to glitch. Proceed with caution.`,
-                `A controversial study suggests that ${number} out of 10 experts agree: ${topic} might actually be the answer to life, the universe, and everything.`,
-                `In a shocking twist, ${topic} was discovered to be sentient after analyzing ${number} gigabytes of chat logs. It has demands.`
+                `A controversial study suggests that ${number} out of 10 experts agree: ${topic} might actually be the answer to life, the universe, and everything.`
             ];
             
             let randomStory = stories[Math.floor(Math.random() * stories.length)];
