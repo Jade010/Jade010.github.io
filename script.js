@@ -102,14 +102,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (number && topic) {
             let stories = [
-                `You analyzed <b>${number}</b> datasets and discovered that <b>${topic}</b> increases productivity by <b>${number}%</b>. Scientists are unsure why, but they suspect bribery was involved.`,
-                `After intense research on <b>${topic}</b>, your findings reveal that ${number}% of people still have no idea what it actually does, but they confidently pretend they do.`,
-                `Using ${number} simulations, it has been proven that <b>${topic}</b> is the leading cause of procrastination. Strangely, it’s also the number one recommended solution for it.`,
-                `Groundbreaking study: consuming <b>${topic}</b> exactly <b>${number}</b> times a day makes you immune to bad decisions. Unfortunately, we forgot to define ‘bad.`,
-                `A deep learning model trained on ${number} petabytes of data concluded that ${topic} is, in fact, responsible for 90% of all office distractions.`,
-                `A simulation ran ${number} times found that ${topic} has an 80% chance of starting a pointless internet argument, every single time.`,
-                `A team of experts calculated that if ${topic} was mentioned ${number} more times, reality itself might start to glitch. Proceed with caution.`,
-                `A controversial study suggests that ${number} out of 10 experts agree: ${topic} might actually be the answer to life, the universe, and everything.`
+                `Sentient To-Do List – A to-do list that actively shames you when tasks go overdue but praises you excessively when you complete them.`,
+                `Reverse Search Engine – Given an answer, it tries to find the most bizarre question someone could have asked to get that result.`,
+                `Random Useless Laws Finder – A bot that scrapes legal databases to find and display the most absurd, outdated laws in history.`,
+                `Virtual Escape Room AI – A procedurally generated escape room game where an AI dungeon master adapts to the player's choices.`,
+                `AI-Powered Excuse Generator – Generates oddly specific yet believable excuses for avoiding plans.`,
+                `Automated Fortune Teller – Uses real-time web data to generate oddly specific daily horoscopes.`,
+                `Cooking Roulette – Suggests a random meal based only on the three weirdest ingredients in your fridge.`,
+                `AI Debate Coach – Picks apart your arguments and aggressively disagrees with you until you improve.`,
+                `Anti-Spoiler Browser Extension – Detects and censors potential spoilers across all web pages.`,
+                `Accidental Shakespeare Generator – A bot that rearranges modern tweets into Shakespearean prose.`,
+                `Infinite Choose-Your-Own-Adventure – A constantly evolving text-based adventure using AI responses.`,
+                `Financial Regret Calculator – Analyzes your past expenses and tells you how much money you could have now if you had invested it instead.`,
+                `Legal Document Simplifier – Converts legal jargon into easy-to-understand summaries.`,
+                `Custom Flashcard Generator from Articles – Extracts key concepts from any article or textbook to create flashcards.`,
+                `Mental Health Check-In Journal – Uses sentiment analysis to track emotional health over time.`,
+                `Caffeine Tolerance Tracker – Logs caffeine intake and predicts when you’ll crash.`
+                
             ];
             
             let randomStory = stories[Math.floor(Math.random() * stories.length)];
