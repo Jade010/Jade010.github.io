@@ -62,11 +62,11 @@ body, html {
     color: #FF5D11;
 } 
 
-#navbar .nav-item[href="#story"] {
+#navbar .nav-item[href="#project-ideas"] {
     color: #FF5D11; 
 }
 
-#navbar .nav-item[href="#story"]:hover {
+#navbar .nav-item[href="#project-ideas"]:hover {
     color: #A03B0C;
 }
 
