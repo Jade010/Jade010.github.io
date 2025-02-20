@@ -96,6 +96,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+            const fortunes = [
+            "Your next dataset will be messier than expected—clean twice!",
+            "The algorithm chooses you... or does it?",
+            "Beware of overfitting. Not all patterns are meaningful!",
+            "A great data discovery awaits you this week!",
+            "You will find an outlier that changes everything.",
+            "Your next model will predict with 99% accuracy... or 9%.",
+            "Someone is debugging their code, and it's probably you.",
+            "Today is a great day to normalize your data!",
+            "Big insights are in your future. So are big spreadsheets.",
+            "The mean is not always the best indicator. Look at the median!",
+            "A rogue semicolon will cause chaos. Stay vigilant.",
+            "You will soon encounter a dataset that defies all logic.",
+            "Your SQL query will run forever… and then return an error.",
+            "The answer lies within the data. So does the confusion!",
+            "Congratulations! You've just met your new favorite API!",
+            "Expect a mysterious null value where you least expect it.",
+            "404: Fortune not found. Try again later!",
+            "A random seed has been set in your life. Expect consistency!",
+            "Your next graph will be an aesthetic masterpiece.",
+            "Machine learning will give you answers, but not the ones you wanted."
+        ];
+        
+        const button = document.getElementById("fortune-button");
+        const textElement = document.getElementById("fortune-text");
+        
+        button.addEventListener("click", function() {
+            const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+            textElement.innerHTML = "";
+            let i = 0;
+            function typeWriter() {
+                if (i < randomFortune.length) {
+                    textElement.innerHTML += randomFortune.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            typeWriter();
+        });
+
     // Contact form handling
     const form = document.getElementById('contact-form');
     const thankYouPopup = document.getElementById('thank-you-popup');
