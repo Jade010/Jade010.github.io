@@ -96,36 +96,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    document.getElementById("generate-story").addEventListener("click", function() {
-        let number = document.getElementById("data-number").value;
-        let topic = document.getElementById("data-topic").value;
+    document.getElementById("generate-idea").addEventListener("click", function() {
+        let ideas = [
+            "Sentient To-Do List – A to-do list that actively shames you when tasks go overdue but praises you excessively when you complete them.",
+            "Reverse Search Engine – Given an answer, it tries to find the most bizarre question someone could have asked to get that result.",
+            "Random Useless Laws Finder – A bot that scrapes legal databases to find and display the most absurd, outdated laws in history.",
+            "Virtual Escape Room AI – A procedurally generated escape room game where an AI dungeon master adapts to the player's choices.",
+            "AI-Powered Excuse Generator – Generates oddly specific yet believable excuses for avoiding plans.",
+            "Automated Fortune Teller – Uses real-time web data to generate oddly specific daily horoscopes.",
+            "Cooking Roulette – Suggests a random meal based only on the three weirdest ingredients in your fridge.",
+            "AI Debate Coach – Picks apart your arguments and aggressively disagrees with you until you improve.",
+            "Anti-Spoiler Browser Extension – Detects and censors potential spoilers across all web pages.",
+            "Accidental Shakespeare Generator – A bot that rearranges modern tweets into Shakespearean prose.",
+            "Infinite Choose-Your-Own-Adventure – A constantly evolving text-based adventure using AI responses.",
+            "Financial Regret Calculator – Analyzes your past expenses and tells you how much money you could have now if you had invested it instead.",
+            "Legal Document Simplifier – Converts legal jargon into easy-to-understand summaries.",
+            "Custom Flashcard Generator from Articles – Extracts key concepts from any article or textbook to create flashcards.",
+            "Mental Health Check-In Journal – Uses sentiment analysis to track emotional health over time.",
+            "Caffeine Tolerance Tracker – Logs caffeine intake and predicts when you’ll crash."
+        ];
         
-        if (number && topic) {
-            let stories = [
-                `Sentient To-Do List – A to-do list that actively shames you when tasks go overdue but praises you excessively when you complete them.`,
-                `Reverse Search Engine – Given an answer, it tries to find the most bizarre question someone could have asked to get that result.`,
-                `Random Useless Laws Finder – A bot that scrapes legal databases to find and display the most absurd, outdated laws in history.`,
-                `Virtual Escape Room AI – A procedurally generated escape room game where an AI dungeon master adapts to the player's choices.`,
-                `AI-Powered Excuse Generator – Generates oddly specific yet believable excuses for avoiding plans.`,
-                `Automated Fortune Teller – Uses real-time web data to generate oddly specific daily horoscopes.`,
-                `Cooking Roulette – Suggests a random meal based only on the three weirdest ingredients in your fridge.`,
-                `AI Debate Coach – Picks apart your arguments and aggressively disagrees with you until you improve.`,
-                `Anti-Spoiler Browser Extension – Detects and censors potential spoilers across all web pages.`,
-                `Accidental Shakespeare Generator – A bot that rearranges modern tweets into Shakespearean prose.`,
-                `Infinite Choose-Your-Own-Adventure – A constantly evolving text-based adventure using AI responses.`,
-                `Financial Regret Calculator – Analyzes your past expenses and tells you how much money you could have now if you had invested it instead.`,
-                `Legal Document Simplifier – Converts legal jargon into easy-to-understand summaries.`,
-                `Custom Flashcard Generator from Articles – Extracts key concepts from any article or textbook to create flashcards.`,
-                `Mental Health Check-In Journal – Uses sentiment analysis to track emotional health over time.`,
-                `Caffeine Tolerance Tracker – Logs caffeine intake and predicts when you’ll crash.`
-                
-            ];
-            
-            let randomStory = stories[Math.floor(Math.random() * stories.length)];
-            document.getElementById("story-output").innerHTML = randomStory;
-        } else {
-            document.getElementById("story-output").innerHTML = "Please enter both a number and a topic.";
-        }
+        let randomIdea = ideas[Math.floor(Math.random() * ideas.length)];
+        document.getElementById("idea-output").innerHTML = randomIdea;
     });
 
     function filterSelection(c) {
