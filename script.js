@@ -101,8 +101,25 @@ document.addEventListener('DOMContentLoaded', function() {
         let topic = document.getElementById("data-topic").value;
         
         if (number && topic) {
-            let story = `You analyzed <b>${number}</b> datasets and discovered that <b>${topic}</b> increases productivity by <b>${number}%</b>!`;
-            document.getElementById("story-output").innerHTML = story;
+            let stories = [
+                `You analyzed <b>${number}</b> datasets and discovered that <b>${topic}</b> increases productivity by <b>${number}%</b>!`,
+                `After intense research on <b>${topic}</b>, your findings reveal that ${number}% of people still have no idea what it actually does!`,
+                `Using ${number} simulations, it has been proven that ${topic} is the leading cause of procrastination... and somehow, also the cure!`,
+                `Groundbreaking study: consuming <b>${topic}</b> exactly <b>${number}</b> times a day makes you immune to bad decisions. Probably.`,
+                `A recent algorithm tested ${number} different ways to use <b>${topic}</b>, and only one of them didn’t result in complete chaos.`,
+                `Breaking news: ${topic} is now classified as an essential nutrient, after a rigorous analysis of ${number} scientific papers (and at least one Reddit thread).`,
+                `An AI model ran ${number} years' worth of data on <b>${topic}</b> and concluded that humans will never agree on its true purpose.`,
+                `Scientists have used ${number} terabytes of data to determine that <b>${topic}</b> is the single most debated topic at family dinners.`,
+                `A deep learning model trained on ${number} petabytes of data concluded that ${topic} is, in fact, responsible for 90% of all office distractions.`,
+                `A controversial study suggests that ${number} out of 10 experts agree: ${topic} might actually be the answer to life, the universe, and everything.`,
+                `In a shocking twist, ${topic} was discovered to be sentient after analyzing ${number} gigabytes of chat logs. It has demands.`,
+                `Scientists accidentally fed ${number} terabytes of memes into an AI, and now it refuses to believe that ${topic} isn't the supreme ruler of the internet.`,
+                `A simulation ran ${number} times found that ${topic} has an 80% chance of starting a pointless internet argument, every single time.`,
+                `A team of experts calculated that if ${topic} was mentioned ${number} more times, reality itself might start to glitch. Proceed with caution.`
+            ];
+            
+            let randomStory = stories[Math.floor(Math.random() * stories.length)];
+            document.getElementById("story-output").innerHTML = randomStory;
         } else {
             document.getElementById("story-output").innerHTML = "Please enter both a number and a topic.";
         }
