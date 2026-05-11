@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────
-   script.js — Jade Aidoghie Portfolio
+   script.js — Jade's Portfolio
 ───────────────────────────────────────── */
 
 document.addEventListener('DOMContentLoaded', () => {
