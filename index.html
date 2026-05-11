@@ -1,228 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jade Aidoghie</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    </head>
-    <body>
-        <div class="main-content">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jade Aidoghie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-            <!--Navigation Bar-->
-            <nav id="navbar">
-                <a href="#home" class="nav-item" id="name-link">JADE AIDOGHIE</a>
-                <div class="nav-links">
-                    <a href="#about" class="nav-item">ABOUT</a>
-                    <a href="#education" class="nav-item">EDUCATION</a>
-                    <a href="#projects" class="nav-item">PROJECTS</a>
-                    <a href="#project-ideas" class="nav-item">INSPIRATION</a>
-                </div>
-            </nav>
-        
-            
-            <!--Home Page-->
-            <section id="home">
-                <div class="home-content">
-                    <div class="text-container">
-                        <div class="text-background">
-                            <h1>Jade Aidoghie</h1>
-                            <h2>Data Analyst & Developer</h2>
-                        </div>
-                    </div>
-                    <div class="picture-box">
-                        <img src="Picture.jpg" alt="Jade Aidoghie" id="profile-icon">
-                    </div>
-                </div>
-            </section>
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <a href="#home" class="nav-logo">JA</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-        
-             <!--About Section-->
-             <section id="about">
-                 <h1 class="subtitle">About Me</h1>
-                 <div class="about-container">
-                     <div class="about-text">
-                         <p>I'm passionate about creative design, optimizing processes, and building functional, utility-driven solutions. I enjoy creating projects that function like ecosystems, where each element interacts harmoniously to form a seamless, adaptive, and efficient system.</p>
-                     </div>
-                     
-                     <!--Areas of Interest-->
-                     <div class="interest-container">
-                         <div class="interest-item">
-                             <img src="Images/database(1).png" alt="Icon" class="interest-icon">
-                             <h3>Database Development</h3>
-                             <p>Specialized in creating and managing efficient, scalable databases using SQL and NoSQL. My focus is on optimizing data storage and retrieval processes for better performance and reliability.</p>
-                         </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#home"      class="mob-link">Home</a>
+    <a href="#about"     class="mob-link">About</a>
+    <a href="#education" class="mob-link">Education</a>
+    <a href="#projects"  class="mob-link">Projects</a>
+    <a href="#connect"   class="mob-link">Connect</a>
+  </div>
 
-                         <div class="interest-item">
-                             <img src="Images/data-analysis.png" alt="Icon" class="interest-icon">
-                             <h3>Data Analysis</h3>
-                             <p>Skilled in analyzing complex datasets to identify trends and insights. I present clear and actionable results through detailed reports and interactive tools.</p>
-                         </div>
+  <!-- ── HERO ── -->
+  <section id="home">
+    <div class="hero-noise"></div>
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
 
-                         <div class="interest-item">
-                             <img src="Images/artificial-intelligence.png" alt="Icon" class="interest-icon">
-                             <h3>Machine Learning</h3>
-                             <p>I use machine learning and my foundation in Statistics to solve real-world problems, focusing on data preprocessing, model training, and evaluation. I develop innovative models for predictive analytics.</p>
-                         </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-eyebrow">Portfolio — 2025</div>
 
-                         <div class="interest-item">
-                             <img src="Images/file-type.png" alt="Icon" class="interest-icon">
-                             <h3>Web Development</h3>
-                             <p>Designing and building responsive, user-friendly websites using HTML, CSS, and JavaScript. Creating engaging online experiences optimized for both desktop and mobile devices.</p>
-                         </div>
+        <h1 class="hero-name">Jade<br>Aidoghie</h1>
 
-                         <div class="interest-item">
-                             <img src="Images/dashboard.png" alt="Icon" class="interest-icon">
-                             <h3>Dashboards</h3>
-                             <p>I create interactive dashboards using tools like Tableau and PowerBI that visualize complex data in a way that can be easily understood. Dashboards can empower stakeholders at all levels to make informed decisions by providing real-time insights.</p>
-                         </div>
-
-                         <div class="interest-item">
-                             <img src="Images/storefront.png" alt="Icon" class="interest-icon">
-                             <h3>System and Process Improvements</h3>
-                             <p>I'm experienced in analyzing existing systems and processes to identify areas for improvement. This includes planning and implementing new software and tools to enhance business operations and increase efficiency.</p>
-                         </div>
-                     </div>
-                 </div>
-            </section>
-    
-             
-            <!--Education Section-->
-            <section id="education">
-                <h1 class="subtitle">Education</h1>
-                <div class="map-container">
-                    <div id="map"></div>
-                </div>
-            </section>
-
-        
-        
-            <!--Projects Section-->
-            <section id="projects">
-                <h1 class="subtitle">Projects</h1>
-                
-                <!--Filter Buttons-->
-                <div id="buttons">
-                    <button class="filter-button active" onclick="filterSelection('all')">All</button>
-                    <button class="filter-button" onclick="filterSelection('python')">Python</button>
-                    <button class="filter-button" onclick="filterSelection('sql')">SQL</button>
-                    <button class="filter-button" onclick="filterSelection('tableau')">Tableau</button>
-                    <button class="filter-button" onclick="filterSelection('web dev')">Web Dev</button>
-                    <button class="filter-button" onclick="filterSelection('machine learning')">Machine Learning</button>
-                </div>
-
-
-                <!--Projects-->
-                <div id="project-container">
-
-                    <!--DoL Database Design-->
-                    <div class="project-card sql" data-repo="https://github.com/Jade010/Database-Management/tree/main/Database%20Design%20and%20Modeling/DeptOfLicensingProject" data-info="You can view this project through its GitHub repository <a href='https://github.com/Jade010/Database-Management/tree/main/Database%20Design%20and%20Modeling/DeptOfLicensingProject' target='_blank'>here</a>.">
-                        <div class="project-info">
-                            <h2>DoL Database Design</h2>
-                            <p>Designed a PostgreSQL database by modeling the data through an Entity-Relationship (ER) diagram based on business requirements and then translating this into a relational model.</p>
-                            <p class="tags">SQL</p> 
-                        </div>
-                    </div>
-
-                    <!--Name Generator Project-->
-                    <div class="project-card python" data-video="./Tutorials/NameGeneratorTutorial.mp4" data-repo="https://github.com/Jade010/Machine-Learning/tree/main/StudentGradePredictions" data-info="You can view the code for this project through my GitHub repository <a href='https://github.com/Jade010/Machine-Learning/tree/main/StudentGradePredictions' target='_blank'>here</a>.">
-                        <div class="project-info">
-                            <h2>Name Generator Application</h2>
-                            <p>GUI application that allows users to generate first names, last names, or full names. It offers multiple filters to customize your results.</p>   
-                            <p class="tags">Python</p> 
-                        </div>
-                    </div>
-                    
-                    <!--Portfolio Website-->
-                    <div class="project-card web dev" data-repo="https://Jade010.github.io" data-info="You're currenlty viewing this project! I consider this a work in progress so I'm always up to suggestions through my contact section. You can view the repository for this website <a href='https://Jade010.github.io' target='_blank'>here</a>.">
-                        <div class="project-info">
-                            <h2>Portfolio Website</h2>
-                            <p>This is my first web development project using github.io. My website acts as my personal portfolio to get a quick understanding of my qualifications.</p>
-                            <p class="tags">HTML / CSS / JavaScript</p>
-                        </div>
-                    </div>
-                    
-                    <!--IMDb Movie Analysis-->
-                    <div class="project-card python" data-repo="https://github.com/Jade010/Python/tree/main/MovieAnalysis" data-info="You can follow the code for this analysis through a Jupyter notebook hosted in my GitHub repository <a href='https://github.com/Jade010/Python/tree/main/MovieAnalysis' target='_blank'>here</a>." >
-                        <div class="project-info">
-                            <h2>IMDb Movie Analysis</h2>
-                            <p>IMDb movie analysis to determine what factors contribute to the success of movies from 1916-2016. You can follow my process through a Jupyter notebook where I inspect, clean, and analyze the data.</p> 
-                            <p class="tags">Python</p> 
-                        </div>
-                    </div>
-                    
-                    <!--Executive Overview Dashboard-->
-                    <div class="project-card tableau" data-repo="https://public.tableau.com/app/profile/jade.aidoghie/viz/ExecutiveOverview_16833998343090/ExecutiveOverview" data-info="You can view this dashboard through my Tableau Public account <a href='https://public.tableau.com/app/profile/jade.aidoghie/viz/ExecutiveOverview_16833998343090/ExecutiveOverview' target='_blank'>here</a>.">
-                        <div class="project-info">
-                            <h2>Executive Overview Dashboard</h2>
-                            <p>This dashboard provides multiple interactive visuals that highlight key business metrics for a faux retail store.</p>
-                            <p class="tags">Tableau</p> 
-                        </div>
-                    </div>
-
-                    <!--Student Final Grade Predictions-->
-                    <div class="project-card machine learning python" data-repo="https://github.com/Jade010/Machine-Learning/tree/main/StudentGradePredictions" data-info="You can follow the code for this analysis through a Jupyter notebook hosted in my GitHub repository <a href='https://github.com/Jade010/Machine-Learning/tree/main/StudentGradePredictions' target='_blank'>here</a>.">
-                        <div class="project-info">
-                            <h2>Student Grade Predictions</h2>
-                            <p>I developed a linear regression model to predict students' final grades in mathematics by analyzing various factors that influence their academic performance.</p> 
-                            <p class="tags">Machine Learning / Python</p> 
-                        </div>
-                    </div>
-
-                    <!--Data Processing Tool-->
-                    <div class="project-card python" data-repo="" data-info="This is a report I automated as a Quality Data Analyst, to protect the data of my company the script and data will not be available for view.">
-                        <div class="project-info">
-                            <h2>Data Processing Tool</h2>
-                            <p>Automated a week-long manual process, now completed in seconds, by importing reports, verifying fields, performing complex checks, and exporting a CSV to the designated folder.</p> 
-                            <p class="tags">Python</p> 
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </section>
-
-            
-            <!-- Modal for project details -->
-            <div id="project-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close-button">&times;</span>
-                    <div id="modal-body"></div>
-                </div>
-            </div>
-
-            
-            <!-- Free Project Ideas Section -->
-            <section id="project-ideas">
-                <div class="project-ideas-container">
-                    <h1 class="subtitle">Project Ideas</h1>
-                    <p>Click the button below to generate a random project idea.</p>
-                    <button id="generate-idea">Generate Idea</button>
-                    <div id="idea-output"></div>
-                </div>
-            </section>
-
-            <!-- Footer content -->
-            <footer>
-                <div class="container row" id="social-container">
-                    <!-- Social links -->
-                    <a href="https://www.linkedin.com/in/jade-aidoghie/" target="_blank">LinkedIn</a>
-                    <span>|</span>
-                    <a href="https://github.com/Jade010" target="_blank">Github</a>
-                    <span>|</span>
-                    <a href="https://public.tableau.com/app/profile/jade.aidoghie/vizzes" target="_blank">Tableau Public</a>
-                </div>
-                <div>
-                    <p>Icons used in the About section created by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp Icons">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
-                    <p>Photo by <a href="https://unsplash.com/@marinareich?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Marina Reich</a> on <a href="https://unsplash.com/photos/red-poppy-flower-j6RBncJvbF4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></p>
-                    <p id="copyright">Copyright &copy; 2024 Jade Aidoghie</p>
-                </div>
-            </footer>
+        <div class="hero-role-wrap">
+          <span class="role-prefix">—&nbsp;</span>
+          <div class="hero-role" aria-live="polite">
+            <span class="role-word" id="role-current">Data Analyst</span>
+            <span class="role-word" id="role-next" aria-hidden="true">Developer</span>
+          </div>
         </div>
 
+        <p class="hero-desc">
+          Passionate about building systems where data, design, and logic
+          come together — crafting solutions that are elegant, efficient,
+          and built to last.
+        </p>
 
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script src="script.js"></script>
-    </body>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#connect"  class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring"></div>
+        <img
+          src="https://jade010.github.io/Picture.jpg"
+          alt="Jade Aidoghie"
+          class="hero-photo"
+        />
+        <div class="hero-photo-badge">
+          <span>Data</span>
+          <span>&amp;</span>
+          <span>Dev</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-hint-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── ABOUT ── -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">About Me</div>
+        <h2 class="section-title">
+          Turning data<br>
+          into <em>decisions</em>
+        </h2>
+        <p class="section-sub">
+          I enjoy creating projects that function like ecosystems — where every
+          element interacts harmoniously to form a seamless, adaptive, efficient system.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="skill-card reveal">
+          <div class="skill-icon">🗄️</div>
+          <h3>Database Development</h3>
+          <p>Specialized in creating and managing efficient, scalable databases using SQL and NoSQL, optimizing storage and retrieval for performance.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">📊</div>
+          <h3>Data Analysis</h3>
+          <p>Skilled in analyzing complex datasets to surface trends and insights, delivered through clear reports and interactive tools.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">🤖</div>
+          <h3>Machine Learning</h3>
+          <p>Using ML and Statistics to solve real-world problems — data preprocessing, model training, evaluation, and predictive analytics.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">🌐</div>
+          <h3>Web Development</h3>
+          <p>Building responsive, user-friendly websites with HTML, CSS, and JavaScript, optimized for every screen size.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">📈</div>
+          <h3>Dashboards</h3>
+          <p>Creating interactive Tableau and PowerBI dashboards that translate complex data into actionable real-time insights.</p>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-icon">⚙️</div>
+          <h3>Process Improvement</h3>
+          <p>Analyzing existing systems to identify inefficiencies and implementing tools that enhance business operations at scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── EDUCATION ── -->
+  <section id="education">
+    <div class="section-inner">
+      <div class="section-label">Background</div>
+      <h2 class="section-title">Education</h2>
+      <p class="section-sub">Building a foundation across data, systems, and analytical thinking.</p>
+
+      <div class="edu-block reveal">
+        <div class="edu-year">2024</div>
+        <div class="edu-body">
+          <h3>B.S. Information Technology</h3>
+          <p>Concentration in Data Analytics &amp; Database Management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-label">Work</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">
+        A selection of builds spanning data engineering, analysis,
+        machine learning, and web development.
+      </p>
+
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="sql">SQL</button>
+        <button class="filter-btn" data-filter="tableau">Tableau</button>
+        <button class="filter-btn" data-filter="web">Web Dev</button>
+        <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <article class="project-card reveal" data-tags="sql">
+          <div class="project-thumb">🗄️</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-sql">SQL</span>
+              <span class="tag tag-sql">PostgreSQL</span>
+            </div>
+            <h3>DoL Database Design</h3>
+            <p>Designed a PostgreSQL database by modeling data through an ER diagram based on business requirements, then translating it into a relational model.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Jade010" target="_blank" rel="noopener">
+                <!-- github icon -->
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.746 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="python">
+          <div class="project-thumb">🔤</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-python">Python</span>
+              <span class="tag tag-python">GUI</span>
+            </div>
+            <h3>Name Generator Application</h3>
+            <p>A GUI application that generates first, last, or full names with multiple filters to customize results by origin and style.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Jade010" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.746 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="web">
+          <div class="project-thumb">🌐</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-web">HTML</span>
+              <span class="tag tag-web">CSS</span>
+              <span class="tag tag-web">JavaScript</span>
+            </div>
+            <h3>Portfolio Website</h3>
+            <p>My personal portfolio built with GitHub Pages — designed to showcase qualifications, projects, and skills in a clean, accessible format.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://jade010.github.io" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                Live Site
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="python">
+          <div class="project-thumb">🎬</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-python">Python</span>
+              <span class="tag tag-python">Jupyter</span>
+            </div>
+            <h3>IMDb Movie Analysis</h3>
+            <p>Analyzed 100 years of IMDb films (1916–2016) to determine what factors drive movie success, with full EDA in a Jupyter notebook.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Jade010" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.746 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="tableau">
+          <div class="project-thumb">📊</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-tableau">Tableau</span>
+            </div>
+            <h3>Executive Overview Dashboard</h3>
+            <p>An interactive Tableau dashboard surfacing key business metrics for a faux retail store, built for executive-level decision-making.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://public.tableau.com/app/profile/jade.aidoghie/vizzes" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                Tableau Public
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="ml python">
+          <div class="project-thumb">🎓</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-ml">Machine Learning</span>
+              <span class="tag tag-python">Python</span>
+            </div>
+            <h3>Student Grade Predictions</h3>
+            <p>A linear regression model predicting students' final math grades by analyzing behavioral, social, and academic factors with feature engineering.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Jade010" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.746 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-tags="python">
+          <div class="project-thumb">⚡</div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-python">Python</span>
+              <span class="tag tag-python">Automation</span>
+            </div>
+            <h3>Data Processing Tool</h3>
+            <p>Automated a week-long manual process down to seconds — importing reports, verifying fields, performing complex checks, and exporting a clean CSV.</p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/Jade010" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.746 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /projects-grid -->
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── CONNECT ── -->
+  <section id="connect">
+    <div class="section-inner connect-inner">
+      <div class="section-label">Let's Talk</div>
+      <h2 class="connect-title">
+        Open to <em>opportunities</em><br>and collaborations
+      </h2>
+      <p class="connect-desc">
+        Whether you're looking for a data analyst, a developer, or just want
+        to talk shop — I'd love to hear from you.
+      </p>
+      <div class="connect-cards">
+        <a href="https://www.linkedin.com/in/jade-aidoghie/" target="_blank" rel="noopener" class="connect-card reveal">
+          <div class="connect-card-icon">💼</div>
+          <div class="connect-card-text">
+            <span>LinkedIn</span>
+            <small>Let's connect</small>
+          </div>
+        </a>
+        <a href="https://github.com/Jade010" target="_blank" rel="noopener" class="connect-card reveal">
+          <div class="connect-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.746 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          </div>
+          <div class="connect-card-text">
+            <span>GitHub</span>
+            <small>See the code</small>
+          </div>
+        </a>
+        <a href="https://public.tableau.com/app/profile/jade.aidoghie/vizzes" target="_blank" rel="noopener" class="connect-card reveal">
+          <div class="connect-card-icon">📊</div>
+          <div class="connect-card-text">
+            <span>Tableau Public</span>
+            <small>View dashboards</small>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>
+      Icons by <a href="https://www.flaticon.com/authors/eucalyp" target="_blank" rel="noopener">Eucalyp</a> on Flaticon &nbsp;·&nbsp;
+      Photo by <a href="https://unsplash.com/@marinareich" target="_blank" rel="noopener">Marina Reich</a> on Unsplash
+    </p>
+    <p class="footer-copy">© 2025 Jade Aidoghie</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
