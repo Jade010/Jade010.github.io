@@ -592,6 +592,23 @@ section { padding: 6rem 2rem; }
   font-weight: 600;
   margin-bottom: 0.3rem;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.edu-honor {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid rgba(212, 96, 26, 0.18);
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+  white-space: nowrap;
 }
 
 .edu-body p {
